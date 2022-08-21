@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "IndustriaAutomotriz.App.Presentacion/1.0.0": {
+        "runtime": {
+          "IndustriaAutomotriz.App.Presentacion.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IndustriaAutomotriz.App.Presentacion/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "lvO75+v6S6mkI5iUYm856adZ+DTR5khlkxYFMiViP++qCycVNkA+O9N2Ese1DybrUAaWF3mitNzRoDybK2Q6lA==",
+  "success": true,
+  "projectFilePath": "D:\\c#\\IndustriaAutomotriz.App\\IndustriaAutomotriz.App.Dominio\\IndustriaAutomotriz.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USUARIO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\USUARIO\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
