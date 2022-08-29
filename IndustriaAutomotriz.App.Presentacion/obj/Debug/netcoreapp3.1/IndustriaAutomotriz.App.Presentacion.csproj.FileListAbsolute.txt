@@ -1,0 +1,13 @@
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\bin\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.exe
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\bin\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.deps.json
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\bin\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.runtimeconfig.json
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\bin\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.runtimeconfig.dev.json
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\bin\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.dll
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\bin\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.pdb
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\obj\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.csprojAssemblyReference.cache
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\obj\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.AssemblyInfoInputs.cache
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\obj\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.AssemblyInfo.cs
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\obj\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.csproj.CoreCompileInputs.cache
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\obj\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.dll
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\obj\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.pdb
+D:\c#\IndustriaAutomotriz.App\IndustriaAutomotriz.App.Presentacion\obj\Debug\netcoreapp3.1\IndustriaAutomotriz.App.Presentacion.genruntimeconfig.cache
