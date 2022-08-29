@@ -7,6 +7,7 @@ namespace Dominio.Entidades
 {
     public class Cargo
     {
-        
+        public int Id {get;set;}
+        public string nombre {get;set;}
     }
 }

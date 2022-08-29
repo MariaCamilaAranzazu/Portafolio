@@ -7,6 +7,9 @@ namespace Dominio.Entidades
 {
     public class AccesoEmpleado
     {
-        
+        public int Id {get;set;}
+        public int EmpleadoCedula {get;set;}
+        public string contraseña {get;set}
+        public string fecha_registro {get;set;}
     }
 }
