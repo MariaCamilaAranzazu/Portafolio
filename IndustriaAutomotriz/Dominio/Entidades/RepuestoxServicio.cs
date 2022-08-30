@@ -13,6 +13,6 @@ namespace Dominio.Entidades
         public int cant_actual {get;set;}
         public int cant_sal_ent {get;set;}
         public int valor_pagar {get;set;}
-        public string fecha {get;set;}
+        public string fecha_creacion {get;set;}
     }
 }

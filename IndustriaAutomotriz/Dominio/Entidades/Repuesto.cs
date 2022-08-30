@@ -11,6 +11,6 @@ namespace Dominio.Entidades
         public string nombre {get;set;}
         public int cantidad {get;set;}
         public int precio_unidad {get;set;}
-        public string fecha_movimiento {get;set;}
+        public string fecha_creacion {get;set;}
     }
 }

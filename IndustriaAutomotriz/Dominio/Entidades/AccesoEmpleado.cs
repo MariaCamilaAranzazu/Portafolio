@@ -9,7 +9,7 @@ namespace Dominio.Entidades
     {
         public int Id {get;set;}
         public int EmpleadoCedula {get;set;}
-        public string contraseña {get;set}
-        public string fecha_registro {get;set;}
+        public string contraseña {get;set;}
+        public string fecha_creacion {get;set;}
     }
 }

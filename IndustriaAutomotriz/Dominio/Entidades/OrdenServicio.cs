@@ -15,7 +15,7 @@ namespace Dominio.Entidades
         public double costo_respuestos {get;set;}
         public double costo_servicio {get;set;}
         public double total_pagar {get;set;}
-        public string fecha {get;set;}
+        public string fecha_creacion {get;set;}
         public string observaciones {get;set;}
     }
 }

@@ -15,7 +15,7 @@ namespace Dominio.Entidades
         public string est_filtro_aire {get;set;}
         public string est_filtro_gasolina {get;set;}
         public string tipo_mantenimiento {get;set;}
-        public string fecha {get;set;}
+        public string fecha_creacion {get;set;}
         public string observaciones {get;set;}
     }
 }
