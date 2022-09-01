@@ -8,9 +8,9 @@ namespace Dominio.Entidades
     public class Repuesto
     {
         public int Id {get;set;}
-        public string nombre {get;set;}
-        public int cantidad {get;set;}
-        public int precio_unidad {get;set;}
-        public string fecha_creacion {get;set;}
+        public string Nombre {get;set;}
+        public int Cantidad {get;set;}
+        public int PrecioUnidad {get;set;}
+        public string FechaCreacion {get;set;}
     }
 }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Dominio.Entidades;
 
-namespace Persistencia
+namespace Persistencia.AppRepositorios
 {
     public class AppDBContext : DbContext
     {

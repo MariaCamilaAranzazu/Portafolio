@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Persistencia;
+using Persistencia.AppRepositorios;
 
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20220830180647_Inicial")]
-    partial class Inicial
+    [Migration("20220901210947_PascalAndId")]
+    partial class PascalAndId
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,13 +30,13 @@ namespace Persistencia.Migrations
                     b.Property<int>("ClienteCedula")
                         .HasColumnType("int");
 
-                    b.Property<string>("contraseña")
+                    b.Property<string>("Contraseña")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("fecha_creacion")
+                    b.Property<string>("FechaCreacion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("usuario")
+                    b.Property<string>("Usuario")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -51,13 +51,13 @@ namespace Persistencia.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Contraseña")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("EmpleadoCedula")
                         .HasColumnType("int");
 
-                    b.Property<string>("contraseña")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("fecha_creacion")
+                    b.Property<string>("FechaCreacion")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -72,10 +72,10 @@ namespace Persistencia.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("fecha_creacion")
+                    b.Property<string>("FechaCreacion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("nombre")
+                    b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -85,63 +85,69 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Dominio.Entidades.Cliente", b =>
                 {
-                    b.Property<int>("Cedula")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("apellido")
+                    b.Property<string>("Apellido")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("correo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("direccion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("fecha_creacion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("telefono")
+                    b.Property<int>("Cedula")
                         .HasColumnType("int");
 
-                    b.HasKey("Cedula");
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FechaCreacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Telefono")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Clientes");
                 });
 
             modelBuilder.Entity("Dominio.Entidades.Empleado", b =>
                 {
-                    b.Property<int>("Cedula")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("apellido")
+                    b.Property<string>("Apellido")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("cargo_id")
+                    b.Property<int>("CargoId")
                         .HasColumnType("int");
 
-                    b.Property<string>("correo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("direccion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("fecha_creacion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("telefono")
+                    b.Property<int>("Cedula")
                         .HasColumnType("int");
 
-                    b.HasKey("Cedula");
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FechaCreacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Telefono")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Empleados");
                 });
@@ -153,31 +159,31 @@ namespace Persistencia.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("act_software")
+                    b.Property<string>("ActSoftware")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("costo_respuestos")
+                    b.Property<double>("CostoRespuestos")
                         .HasColumnType("float");
 
-                    b.Property<double>("costo_servicio")
+                    b.Property<double>("CostoServicio")
                         .HasColumnType("float");
 
-                    b.Property<int>("emp_cedula")
+                    b.Property<int>("EmpCedula")
                         .HasColumnType("int");
 
-                    b.Property<string>("fecha_creacion")
+                    b.Property<string>("FechaCreacion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("inst_repuestos")
+                    b.Property<string>("InstRepuestos")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("observaciones")
+                    b.Property<string>("Observaciones")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("rev_id")
+                    b.Property<int>("RevId")
                         .HasColumnType("int");
 
-                    b.Property<double>("total_pagar")
+                    b.Property<double>("TotalPagar")
                         .HasColumnType("float");
 
                     b.HasKey("Id");
@@ -192,16 +198,16 @@ namespace Persistencia.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("cantidad")
+                    b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
-                    b.Property<string>("fecha_creacion")
+                    b.Property<string>("FechaCreacion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("nombre")
+                    b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("precio_unidad")
+                    b.Property<int>("PrecioUnidad")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -216,22 +222,22 @@ namespace Persistencia.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("CantActual")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CantSalEnt")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FechaCreacion")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("OrdenServicioId")
                         .HasColumnType("int");
 
                     b.Property<int>("RepuestoId")
                         .HasColumnType("int");
 
-                    b.Property<int>("cant_actual")
-                        .HasColumnType("int");
-
-                    b.Property<int>("cant_sal_ent")
-                        .HasColumnType("int");
-
-                    b.Property<string>("fecha_creacion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("valor_pagar")
+                    b.Property<int>("ValorPagar")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -252,25 +258,25 @@ namespace Persistencia.Migrations
                     b.Property<int>("EmpleadoCedula")
                         .HasColumnType("int");
 
+                    b.Property<string>("EstAceite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EstFiltroAire")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EstFiltroGasolina")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FechaCreacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Observaciones")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoMantenimiento")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("VehiculoPlaca")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("est_aceite")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("est_filtro_aire")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("est_filtro_gasolina")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("fecha_creacion")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("observaciones")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("tipo_mantenimiento")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -280,28 +286,33 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Dominio.Entidades.Vehiculo", b =>
                 {
-                    b.Property<string>("Placa")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("cli_cedula")
+                    b.Property<int>("CliCedula")
                         .HasColumnType("int");
 
-                    b.Property<string>("color")
+                    b.Property<string>("Color")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("fecha_creacion")
+                    b.Property<string>("FechaCreacion")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("marca")
+                    b.Property<string>("Marca")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("modelo")
+                    b.Property<string>("Modelo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("tipo")
+                    b.Property<string>("Placa")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Placa");
+                    b.Property<string>("Tipo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Vehiculos");
                 });

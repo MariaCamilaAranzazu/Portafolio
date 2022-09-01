@@ -11,11 +11,11 @@ namespace Dominio.Entidades
         public int ClienteCedula {get;set;}
         public int EmpleadoCedula {get;set;}
         public string VehiculoPlaca {get;set;}
-        public string est_aceite {get;set;}
-        public string est_filtro_aire {get;set;}
-        public string est_filtro_gasolina {get;set;}
-        public string tipo_mantenimiento {get;set;}
-        public string fecha_creacion {get;set;}
-        public string observaciones {get;set;}
+        public string EstAceite {get;set;}
+        public string EstFiltroAire {get;set;}
+        public string EstFiltroGasolina {get;set;}
+        public string TipoMantenimiento {get;set;}
+        public string FechaCreacion {get;set;}
+        public string Observaciones {get;set;}
     }
 }

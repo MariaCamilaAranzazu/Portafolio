@@ -9,14 +9,14 @@ namespace Dominio.Entidades
 {
     public class Empleado
     {
-        public string nombre {get;set;}
-        public string apellido {get;set;}
-        [Key]
+        public int Id {get;set;}
+        public string Nombre {get;set;}
+        public string Apellido {get;set;}
         public int Cedula {get;set;}
-        public int cargo_id {get;set;}
-        public int telefono {get;set;}
-        public string direccion {get;set;}
-        public string correo {get;set;}
-        public string fecha_creacion {get;set;}
+        public int CargoId {get;set;}
+        public int Telefono {get;set;}
+        public string Direccion {get;set;}
+        public string Correo {get;set;}
+        public string FechaCreacion {get;set;}
     }
 }

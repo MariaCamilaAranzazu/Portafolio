@@ -8,14 +8,14 @@ namespace Dominio.Entidades
     public class OrdenServicio
     {
         public int Id {get;set;}
-        public int rev_id {get;set;}
-        public int emp_cedula {get;set;}
-        public string act_software {get;set;}
-        public string inst_repuestos {get;set;}
-        public double costo_respuestos {get;set;}
-        public double costo_servicio {get;set;}
-        public double total_pagar {get;set;}
-        public string fecha_creacion {get;set;}
-        public string observaciones {get;set;}
+        public int RevId {get;set;}
+        public int EmpCedula {get;set;}
+        public string ActSoftware {get;set;}
+        public string InstRepuestos {get;set;}
+        public double CostoRespuestos {get;set;}
+        public double CostoServicio {get;set;}
+        public double TotalPagar {get;set;}
+        public string FechaCreacion {get;set;}
+        public string Observaciones {get;set;}
     }
 }

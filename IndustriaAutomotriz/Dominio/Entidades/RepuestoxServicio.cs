@@ -10,9 +10,9 @@ namespace Dominio.Entidades
         public int Id {get;set;}
         public int OrdenServicioId {get;set;}
         public int RepuestoId {get;set;}
-        public int cant_actual {get;set;}
-        public int cant_sal_ent {get;set;}
-        public int valor_pagar {get;set;}
-        public string fecha_creacion {get;set;}
+        public int CantActual {get;set;}
+        public int CantSalEnt {get;set;}
+        public int ValorPagar {get;set;}
+        public string FechaCreacion {get;set;}
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class PascalAndId : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,9 +13,9 @@ namespace Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ClienteCedula = table.Column<int>(type: "int", nullable: false),
-                    usuario = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    contraseña = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Usuario = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Contraseña = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -29,8 +29,8 @@ namespace Persistencia.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     EmpleadoCedula = table.Column<int>(type: "int", nullable: false),
-                    contraseña = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Contraseña = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -43,8 +43,8 @@ namespace Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -55,37 +55,39 @@ namespace Persistencia.Migrations
                 name: "Clientes",
                 columns: table => new
                 {
-                    Cedula = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    telefono = table.Column<int>(type: "int", nullable: false),
-                    direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Cedula = table.Column<int>(type: "int", nullable: false),
+                    Telefono = table.Column<int>(type: "int", nullable: false),
+                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Clientes", x => x.Cedula);
+                    table.PrimaryKey("PK_Clientes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Empleados",
                 columns: table => new
                 {
-                    Cedula = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    cargo_id = table.Column<int>(type: "int", nullable: false),
-                    telefono = table.Column<int>(type: "int", nullable: false),
-                    direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apellido = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Cedula = table.Column<int>(type: "int", nullable: false),
+                    CargoId = table.Column<int>(type: "int", nullable: false),
+                    Telefono = table.Column<int>(type: "int", nullable: false),
+                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Empleados", x => x.Cedula);
+                    table.PrimaryKey("PK_Empleados", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -94,15 +96,15 @@ namespace Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    rev_id = table.Column<int>(type: "int", nullable: false),
-                    emp_cedula = table.Column<int>(type: "int", nullable: false),
-                    act_software = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    inst_repuestos = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    costo_respuestos = table.Column<double>(type: "float", nullable: false),
-                    costo_servicio = table.Column<double>(type: "float", nullable: false),
-                    total_pagar = table.Column<double>(type: "float", nullable: false),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    observaciones = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    RevId = table.Column<int>(type: "int", nullable: false),
+                    EmpCedula = table.Column<int>(type: "int", nullable: false),
+                    ActSoftware = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    InstRepuestos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CostoRespuestos = table.Column<double>(type: "float", nullable: false),
+                    CostoServicio = table.Column<double>(type: "float", nullable: false),
+                    TotalPagar = table.Column<double>(type: "float", nullable: false),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Observaciones = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -115,10 +117,10 @@ namespace Persistencia.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    cantidad = table.Column<int>(type: "int", nullable: false),
-                    precio_unidad = table.Column<int>(type: "int", nullable: false),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Cantidad = table.Column<int>(type: "int", nullable: false),
+                    PrecioUnidad = table.Column<int>(type: "int", nullable: false),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -133,10 +135,10 @@ namespace Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     OrdenServicioId = table.Column<int>(type: "int", nullable: false),
                     RepuestoId = table.Column<int>(type: "int", nullable: false),
-                    cant_actual = table.Column<int>(type: "int", nullable: false),
-                    cant_sal_ent = table.Column<int>(type: "int", nullable: false),
-                    valor_pagar = table.Column<int>(type: "int", nullable: false),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    CantActual = table.Column<int>(type: "int", nullable: false),
+                    CantSalEnt = table.Column<int>(type: "int", nullable: false),
+                    ValorPagar = table.Column<int>(type: "int", nullable: false),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -152,12 +154,12 @@ namespace Persistencia.Migrations
                     ClienteCedula = table.Column<int>(type: "int", nullable: false),
                     EmpleadoCedula = table.Column<int>(type: "int", nullable: false),
                     VehiculoPlaca = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    est_aceite = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    est_filtro_aire = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    est_filtro_gasolina = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    tipo_mantenimiento = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    observaciones = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    EstAceite = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EstFiltroAire = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EstFiltroGasolina = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TipoMantenimiento = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Observaciones = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -168,17 +170,19 @@ namespace Persistencia.Migrations
                 name: "Vehiculos",
                 columns: table => new
                 {
-                    Placa = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    tipo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    cli_cedula = table.Column<int>(type: "int", nullable: false),
-                    marca = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    modelo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    color = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    fecha_creacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Tipo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Placa = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CliCedula = table.Column<int>(type: "int", nullable: false),
+                    Marca = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Modelo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Color = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FechaCreacion = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Vehiculos", x => x.Placa);
+                    table.PrimaryKey("PK_Vehiculos", x => x.Id);
                 });
         }
 

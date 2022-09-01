@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Globalization;
 using System.Threading;
 using System.Dynamic;
@@ -14,68 +16,74 @@ namespace Persistencia.AppRepositorios
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly AppDBContext _context;
+        public AppDBContext _context;
+        public DbSet<T> table;
 
-        public Repository(AppDBContext context)
+        public Repository()
+        {
+            this._context = new AppDBContext();
+            table = _context.Set<T>();
+        }
+
+        /*public Repository(AppDBContext context)
         {
             this._context = context;
-        }
-
-        protected DbSet<T> EntitySet
-        {
-            get
-            {
-                return _context.Set<T>();
-            }
-        }
+            table = this._context.Set<T>();
+        }*/
 
         public async Task<IEnumerable<T>> GetAll()
         {
-            return await EntitySet.ToListAsync();
+            return await table.ToListAsync();
         }
          
         public async Task<T> GetByID(int Id)
         {
-            return await EntitySet.FindAsync(Id);
+            return await table.FindAsync(Id);
         }
 
         public async Task<T> GetByCedula(int Cedula)
         {
-            return await EntitySet.FindAsync(Cedula);
+            return await table.FindAsync(Cedula);
         }
 
         public async Task<T> GetByPlaca(string Placa)
         {
-            return await EntitySet.FindAsync(Placa);
+            return await table.FindAsync(Placa);
         }
 
         public async Task<T> Insert(T entity)
         {
-            EntitySet.Add(entity);
-            await Save();
+            Console.WriteLine("Esto se ejecuta?");
+            await table.AddAsync(entity);
+            Console.WriteLine("Parece que si... :D");
+            //_context.SaveChanges();
+            //Console.WriteLine("Parece que si... :D");
+            _context.SaveChanges();
+
+            Console.WriteLine("Se guardó correctamente!");
             return entity;
         }
 
         public async Task<T> DeleteByID(int Id)
         {
-            T entity = await EntitySet.FindAsync(Id);
-            EntitySet.Remove(entity);
+            T entity = await table.FindAsync(Id);
+            table.Remove(entity);
             await Save();
             return entity;
         }
 
         public async Task<T> DeleteByCedula(int Cedula)
         {
-            T entity = await EntitySet.FindAsync(Cedula);
-            EntitySet.Remove(entity);
+            T entity = await table.FindAsync(Cedula);
+            table.Remove(entity);
             await Save();
             return entity;
         }
 
         public async Task<T> DeleteByPlaca(string Placa)
         {
-            T entity = await EntitySet.FindAsync(Placa);
-            EntitySet.Remove(entity);
+            T entity = await table.FindAsync(Placa);
+            table.Remove(entity);
             await Save();
             return entity;
         }
@@ -88,7 +96,9 @@ namespace Persistencia.AppRepositorios
 
         public async Task Save()
         {
+            Console.WriteLine("Entra en el método guardar, pero parece que no sale, o si?");
             await _context.SaveChangesAsync();
+            Console.WriteLine("Ya saliooooo!");
         }
 
         private bool disposed = false;

@@ -9,14 +9,13 @@ namespace Dominio.Entidades
 {
     public class Vehiculo
     {
-
-        public string tipo {get;set;}
-        [Key]
+        public int Id {get;set;}
+        public string Tipo {get;set;}
         public string Placa {get;set;}
-        public int cli_cedula {get;set;}
-        public string marca {get;set;}
-        public string modelo {get;set;}
-        public string color {get;set;}
-        public string fecha_creacion {get;set;}
+        public int CliCedula {get;set;}
+        public string Marca {get;set;}
+        public string Modelo {get;set;}
+        public string Color {get;set;}
+        public string FechaCreacion {get;set;}
     }
 }
