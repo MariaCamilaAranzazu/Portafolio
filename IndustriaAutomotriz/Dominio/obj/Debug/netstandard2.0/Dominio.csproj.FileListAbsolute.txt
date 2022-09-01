@@ -1,9 +1,0 @@
-D:\C#\IndustriaAutomotriz\Dominio\bin\Debug\netstandard2.0\Dominio.deps.json
-D:\C#\IndustriaAutomotriz\Dominio\bin\Debug\netstandard2.0\Dominio.dll
-D:\C#\IndustriaAutomotriz\Dominio\bin\Debug\netstandard2.0\Dominio.pdb
-D:\C#\IndustriaAutomotriz\Dominio\obj\Debug\netstandard2.0\Dominio.csprojAssemblyReference.cache
-D:\C#\IndustriaAutomotriz\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfoInputs.cache
-D:\C#\IndustriaAutomotriz\Dominio\obj\Debug\netstandard2.0\Dominio.AssemblyInfo.cs
-D:\C#\IndustriaAutomotriz\Dominio\obj\Debug\netstandard2.0\Dominio.csproj.CoreCompileInputs.cache
-D:\C#\IndustriaAutomotriz\Dominio\obj\Debug\netstandard2.0\Dominio.dll
-D:\C#\IndustriaAutomotriz\Dominio\obj\Debug\netstandard2.0\Dominio.pdb
