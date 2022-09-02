@@ -7,6 +7,7 @@ using System;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Persistencia.AppRepositorios;
@@ -14,7 +15,7 @@ using Dominio.Entidades;
 
 namespace Persistencia.AppRepositorios
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : class//, IEntity
     {
         public AppDBContext _context;
         public DbSet<T> table;
@@ -25,79 +26,55 @@ namespace Persistencia.AppRepositorios
             table = _context.Set<T>();
         }
 
-        /*public Repository(AppDBContext context)
+        public Repository(AppDBContext context)
         {
             this._context = context;
             table = this._context.Set<T>();
-        }*/
+        }
+
+        public async Task<T> Insert(T entity)
+        {
+            Console.WriteLine("Guardando");
+            await table.AddAsync(entity);
+            Console.WriteLine("Parece que... :D");
+            Save();
+
+            Console.WriteLine("Se guardó correctamente!");
+            return entity;
+        }
 
         public async Task<IEnumerable<T>> GetAll()
         {
             return await table.ToListAsync();
         }
          
-        public async Task<T> GetByID(int Id)
+        public async Task<T> GetById(int id)
         {
-            return await table.FindAsync(Id);
+            return await table.FindAsync(id);
+            //return table.Find(id);
         }
 
-        public async Task<T> GetByCedula(int Cedula)
+        public async Task<T> GetBy(Expression<Func<T, bool>> predicate)
         {
-            return await table.FindAsync(Cedula);
+            return await table.FirstOrDefaultAsync(predicate);
         }
 
-        public async Task<T> GetByPlaca(string Placa)
-        {
-            return await table.FindAsync(Placa);
-        }
-
-        public async Task<T> Insert(T entity)
-        {
-            Console.WriteLine("Esto se ejecuta?");
-            await table.AddAsync(entity);
-            Console.WriteLine("Parece que si... :D");
-            //_context.SaveChanges();
-            //Console.WriteLine("Parece que si... :D");
-            _context.SaveChanges();
-
-            Console.WriteLine("Se guardó correctamente!");
-            return entity;
-        }
-
-        public async Task<T> DeleteByID(int Id)
-        {
-            T entity = await table.FindAsync(Id);
-            table.Remove(entity);
-            await Save();
-            return entity;
-        }
-
-        public async Task<T> DeleteByCedula(int Cedula)
-        {
-            T entity = await table.FindAsync(Cedula);
-            table.Remove(entity);
-            await Save();
-            return entity;
-        }
-
-        public async Task<T> DeleteByPlaca(string Placa)
-        {
-            T entity = await table.FindAsync(Placa);
-            table.Remove(entity);
-            await Save();
-            return entity;
-        }
-
-        public async Task Update(T entity)
+        public void Update(T entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
-            await Save();
+            Save();
         }
 
-        public async Task Save()
+        public void Delete(T entity)
+        {
+            table.Remove(entity);
+            Save();
+        }
+
+        public void Save()
         {
             Console.WriteLine("Entra en el método guardar, pero parece que no sale, o si?");
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
             Console.WriteLine("Ya saliooooo!");
         }
 

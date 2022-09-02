@@ -24,21 +24,23 @@ namespace PresentacionC
            agregarAccesoC();
         }
 
-        private static async void agregarAccesoC()
+        private static void agregarAccesoC()
         {
             var DBContext = new AppDBContext();
-            var repositorioAccesoC = new Repository<Vehiculo>(); //A la instacia Repository<> se le pasa el nombre de la entidad cuya tabla queremos modificar.
-            var accesoC = new Vehiculo(); //Se crea una nueva instacia con el nombre de la entidad que ajustamos en la linea anterior.
+            var repositorioAccesoC = new Repository<AccesoCliente>(DBContext); //A la instacia Repository<> se le pasa el nombre de la entidad cuya tabla queremos modificar.
+            var accesoC = new AccesoCliente(); //Se crea una nueva instacia con el nombre de la entidad que ajustamos en la linea anterior.
 
             //Descomentar el código de acuerdo a la entidad que queramos crear para pasarle un nuevo registro a la tabla.
             //Corregir el nombre de las variables porque se hicieron con la migración anterior.
 
 
             //Datos Acceso Cliente
-            /*accesoC.ClienteCedula = ;
-            accesoC.usuario = "Asincrono";
-            accesoC.contraseña = "Asincrono";
-            accesoC.fecha_creacion = "1/09/2022";*/
+
+            /*accesoC.Id = 2;
+            accesoC.ClienteCedula = 12345678;
+            accesoC.Usuario = "Cristian";
+            accesoC.Contraseña = "654321";
+            accesoC.FechaCreacion = "2/09/2022";*/
 
             //Datos Acceso Empleado
             /*accesoC.EmpleadoCedula = ;
@@ -115,18 +117,67 @@ namespace PresentacionC
 
 
             Console.WriteLine("Datos asignados a la entidad, correctamente...");
-            await repositorioAccesoC.Insert(accesoC);
+
+            //Encontrar por ID
+            //var accesoEncontrado = repositorioAccesoC.GetById(9).Result;
+            //Linea para saber que se encontró
+            //Console.WriteLine("Se encontró: " + accesoEncontrado.Contraseña);
+
+            //Encontrar por cualquier otro criterio
+            //var accesoEncontrado = repositorioAccesoC.GetBy(c => c.Placa == "ABC 123").Result;
+            //Linea para saber que se encontró
+            //Console.WriteLine("Se encontró: " + accesoEncontrado.Contraseña);
+
+            //Obtener todos los valores en una lista
+            //var accesoEncontrado = repositorioAccesoC.GetAll().Result;
+            /*foreach (AccesoCliente registro in accesoEncontrado)
+            {
+                Console.WriteLine("Se encontró Id: " + registro.Id);
+                Console.WriteLine("Se encontró Cedula: " + registro.ClienteCedula);
+                Console.WriteLine("Se encontró Usuario: " + registro.Usuario);
+                Console.WriteLine("Se encontró Contraseña: " + registro.Contraseña);
+                Console.WriteLine("Se encontró Fecha de registro: " + registro.FechaCreacion );
+                Console.WriteLine("*************************************************************" );
+
+            }*/
+
+            //Editar registro Encontrado
+
+            /*var accesoEncontrado = repositorioAccesoC.GetBy(a => a.Usuario == "Edward").Result;
+            //Linea para saber que se encontró
+            Console.WriteLine("Se encontró: " + accesoEncontrado.Usuario);
+
+            accesoEncontrado.ClienteCedula = 51422698;
+            accesoEncontrado.Usuario = "Jacinto";
+            accesoEncontrado.Contraseña = "Jac789";
+            accesoEncontrado.FechaCreacion = "3/09/2022";
+
+            repositorioAccesoC.Update(accesoEncontrado);*/
+
+            //Eliminar Registro: Se busca primero y se guarda en una variable y se le pasa a la función Delete.
+            /*var accesoEncontrado = repositorioAccesoC.GetById(8).Result;
+            repositorioAccesoC.Delete(accesoEncontrado);
+            Console.WriteLine("Se eliminó: " + accesoEncontrado.Usuario);*/
+
+
+            //Linea para saber que se encontró
+            //Console.WriteLine("Se encontró: " + accesoEncontrado.Usuario);
+            
 
             //Descomentar el bloque correspondiente a la entidad que vamos a agregar, para verificar por consola los datos agregados
             //Tambien hay que corregir nombres de variables.
 
+            //INSERTAR REGISTRO 
+
+
+            //repositorioAccesoC.Insert(accesoC);
 
             //acceso Cliente
             /*Console.WriteLine("Se agregó: " + accesoC.Id);
             Console.WriteLine("Se agregó: " + accesoC.ClienteCedula);
-            Console.WriteLine("Se agregó: " + accesoC.usuario);
-            Console.WriteLine("Se agregó: " + accesoC.contraseña);
-            Console.WriteLine("Se agregó: " + accesoC.fecha_creacion);*/
+            Console.WriteLine("Se agregó: " + accesoC.Usuario);
+            Console.WriteLine("Se agregó: " + accesoC.Contraseña);
+            Console.WriteLine("Se agregó: " + accesoC.FechaCreacion);*/
 
             //Acceso Empleado
             /*Console.WriteLine("Se agregó: " + accesoC.Id);
