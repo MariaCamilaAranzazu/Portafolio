@@ -9,6 +9,9 @@ namespace Persistencia.AppRepositorios
 {
     public class AppDBContext : DbContext
     {
+        public AppDBContext(DbContextOptions<AppDBContext> options)
+          : base(options){ }
+
         public DbSet<AccesoCliente> AccesosClientes {get;set;}
         public DbSet<AccesoEmpleado> AccesosEmpleados {get;set;}
         public DbSet<Cargo> Cargos {get;set;}

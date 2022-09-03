@@ -1,28 +1,19 @@
 Lista de cambios:
 
--Renombrada la carpeta del proyecto a "IndustriaAutomotriz"
--Se crea la capa de Dominio desde cero y se renombra a "Dominio"
--Se crea la capa de Persistencia desde cero y se renombra a "Persistencia"
--Se crea la capa de Presentación desde cero como PROYECTO DE CONSOLA y se renombra a "PresentacionC". Esto para diferenciarla de la futura capa de presentación en razor.
--Se crea el archivo solución desde cero
--En la capa de Persistencia se agrega la referencia a Dominio
--En la capa de Presentación se agrega la referencia a Dominio 
--Se crea la carpeta "Entidades" dentro de la capa de Dominio
--Se crean todas las entidades VACIAS, una por cada tabla del modelo entidad-relación. Con su nombre en SINGULAR ya que representan un solo objeto.
--Modificado el archivo Persistencia.csproj ubicado en capa de Persistencia
--Se cambia el TargetFramework a la version "netcoreapp3.1"
--Se instala Entity Framework (EF) versión 5.0.17 en la capa Persistencia
--El comando usado fue: 
--dotnet add package Microsoft.EntityFrameworkCore --version 5.0.17
--Se instalan los componentes Tools y Design del EF
--Comandos usados:
--dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.17
--dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.17
--dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.17
--Se crea la carpeta "AppRepositorios" en la capa de Persistencia
--Se crea la carpeta "AppData" en la capa de Persistencia
--Se crea el archivo "AppDBContext.cs" en la carpeta AppRepositorios en la capa de Persistencia
--Se agregan todos los DbSet, uno por cada entidad de la capa de Dominio.
--Se cambia el TargetFramework de la capa Dominio a la versión "netstandard2.1"
--Se agrega un nombre de base de datos a los ajustes del AppDBContext
--La base de datos se llamará IndustriaAutomotrizData
+-Se crea un una pagina de prueba en el frontend con su respectivo modelo
+-La página crea una tabla a partir de consultar la tabla de AccesosClientes y muestra los registros que contiene en la base de datos
+-El proyecto cuenta con un repositorio genérico
+-La clase AppDBContext tiene un constructor que recibe opciones, por medio de este se inyecta el DbContext en Startup.cs
+-Las operaciones sobre la base de datos son funcionales para:
+-Agregar un nuevo registro en cualquier tabla
+-Obtener una lista con todos los registros de una determinada tabla
+-Obtener un registro por Id 
+-Obtener un registro buscando por cualquier campo de una determinada tabla
+-Editar un registro de cualquier tabla
+-Eliminar un registro de cualquier tabla
+-El commit se hace eliminando todas las carpetas bin y obj para evitar problemas con las migraciones
+-Se está trabajando sobre la migración "PascalAndId" donde se cambió el nombre de todas las variables de las entidades y 
+-Se agregaron los campos id a las entidades cliente, empleado y vehiculo
+-Se recomienda eliminar la base de datos desde el SQL Server si ya habian aplicado la migración inicial
+-En la capa de "PresentacionC" hay un programa llamado "Program.cs" que contiene código comentado
+-El código sirve para probar todas las funciones del repositorio sobre la base de datos, hasta acá es completamente funcional

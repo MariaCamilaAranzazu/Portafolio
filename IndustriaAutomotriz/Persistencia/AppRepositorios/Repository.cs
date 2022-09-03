@@ -22,7 +22,10 @@ namespace Persistencia.AppRepositorios
 
         public Repository()
         {
-            this._context = new AppDBContext();
+            var contextOptions = new DbContextOptionsBuilder<AppDBContext>()
+            .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database = IndustriaAutomotrizData")
+            .Options;
+            this._context = new AppDBContext(contextOptions);
             table = _context.Set<T>();
         }
 

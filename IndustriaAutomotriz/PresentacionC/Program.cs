@@ -26,7 +26,10 @@ namespace PresentacionC
 
         private static void agregarAccesoC()
         {
-            var DBContext = new AppDBContext();
+            var contextOptions = new DbContextOptionsBuilder<AppDBContext>()
+            .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database = IndustriaAutomotrizData")
+            .Options;
+            var DBContext = new AppDBContext(contextOptions);
             var repositorioAccesoC = new Repository<AccesoCliente>(DBContext); //A la instacia Repository<> se le pasa el nombre de la entidad cuya tabla queremos modificar.
             var accesoC = new AccesoCliente(); //Se crea una nueva instacia con el nombre de la entidad que ajustamos en la linea anterior.
 
@@ -119,9 +122,9 @@ namespace PresentacionC
             Console.WriteLine("Datos asignados a la entidad, correctamente...");
 
             //Encontrar por ID
-            //var accesoEncontrado = repositorioAccesoC.GetById(9).Result;
+            var accesoEncontrado = repositorioAccesoC.GetById(7).Result;
             //Linea para saber que se encontró
-            //Console.WriteLine("Se encontró: " + accesoEncontrado.Contraseña);
+            Console.WriteLine("Se encontró: " + accesoEncontrado.Usuario);
 
             //Encontrar por cualquier otro criterio
             //var accesoEncontrado = repositorioAccesoC.GetBy(c => c.Placa == "ABC 123").Result;

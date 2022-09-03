@@ -1,0 +1,75 @@
+@page
+@model Presentacion.Pages.Pruebas
+
+
+
+<table class= "Tabla">
+    <h1>Tabla de usuarios Clientes: Obtenida desde la base de datos</h1>
+    <thead>
+        <th>
+            Id
+        </th>
+        <th>
+            Cédula Cliente
+        </th>
+        <th>
+            Nombre Usuario
+        </th>
+        <th>
+            Contraseña
+        </th>
+        <th>
+            Fecha de Registro
+        </th>
+    </thead>
+    @foreach (var item in Model.accesosClientes)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.ClienteCedula</td>
+            <td>@item.Usuario</td>
+            <td>@item.Contraseña</td>
+            <td>@item.FechaCreacion</td>
+            <td class="botones"><button id=@item.Id >Eliminar</button></td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    
+</div>
+<style>
+    button, h1{
+        padding: 5px; 
+        background-color:purple; 
+        color:white; 
+        font-weight:bold;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 9px purple;
+        margin: 5px 0px;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    td, th{
+        padding-right: 55px;
+        text-align: end;
+    }
+
+    main{
+        display: inline-block !important;
+        box-shadow: 0px 1px 10px purple;
+        padding: 15px;
+        border-radius: 15px;
+    }
+    h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .botones{
+        padding: 0px;
+    }
+
+</style>

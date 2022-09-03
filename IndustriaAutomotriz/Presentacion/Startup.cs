@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Dominio.Entidades;
+using Persistencia.AppRepositorios;
+using Microsoft.EntityFrameworkCore;
 
 namespace Presentacion
 {
@@ -24,6 +27,9 @@ namespace Presentacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            //string connection = Configuration.GetConnectionString("Server=(localdb)\\MSSQLLocalDB; Database = IndustriaAutomotrizData");
+            services.AddDbContext<AppDBContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database = IndustriaAutomotrizData"), ServiceLifetime.Transient, ServiceLifetime.Singleton);
+            services.AddSingleton<IRepository<AccesoCliente>, Repository<AccesoCliente>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
