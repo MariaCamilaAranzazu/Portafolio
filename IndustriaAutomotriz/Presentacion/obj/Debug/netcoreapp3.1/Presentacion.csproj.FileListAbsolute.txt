@@ -1,3 +1,10 @@
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.csprojAssemblyReference.cache
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.AssemblyInfoInputs.cache
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.AssemblyInfo.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.csproj.CoreCompileInputs.cache
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.MvcApplicationPartsAssemblyInfo.cache
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.RazorAssemblyInfo.cache
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.RazorAssemblyInfo.cs
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\appsettings.json
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -9,9 +16,11 @@ D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Presentacion.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Presentacion.pdb
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Presentacion.Views.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Presentacion.Views.pdb
+D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Humanizer.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -53,13 +62,6 @@ D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Dominio.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Persistencia.dll
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Persistencia.pdb
 D:\C#\IndustriaAutomotriz\Presentacion\bin\Debug\netcoreapp3.1\Dominio.pdb
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.csprojAssemblyReference.cache
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.AssemblyInfoInputs.cache
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.AssemblyInfo.cs
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.csproj.CoreCompileInputs.cache
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.MvcApplicationPartsAssemblyInfo.cache
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.RazorAssemblyInfo.cache
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.RazorAssemblyInfo.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.TagHelpers.input.cache
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.TagHelpers.output.cache
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.RazorCoreGenerate.cache

@@ -9,8 +9,13 @@ namespace Persistencia.AppRepositorios
 {
     public class AppDBContext : DbContext
     {
+        public AppDBContext()
+        {
+        }
         public AppDBContext(DbContextOptions<AppDBContext> options)
-          : base(options){ }
+          : base(options)
+        {
+        }
 
         public DbSet<AccesoCliente> AccesosClientes {get;set;}
         public DbSet<AccesoEmpleado> AccesosEmpleados {get;set;}
@@ -30,6 +35,7 @@ namespace Persistencia.AppRepositorios
             optionsBuilder
             .UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = IndustriaAutomotrizData");
         }
+        optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database=IndustriaAutomotrizData");
     }
     }
 
