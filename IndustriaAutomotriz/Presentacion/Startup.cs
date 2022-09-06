@@ -28,8 +28,10 @@ namespace Presentacion
         {
             services.AddRazorPages();
             //string connection = Configuration.GetConnectionString("Server=(localdb)\\MSSQLLocalDB; Database = IndustriaAutomotrizData");
-            services.AddDbContext<AppDBContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB; Database = IndustriaAutomotrizData"), ServiceLifetime.Transient, ServiceLifetime.Singleton);
-            services.AddSingleton<IRepository<AccesoCliente>, Repository<AccesoCliente>>();
+            services.AddDbContext<AppDBContext>(options => options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = IndustriaAutomotrizData"));
+            //services.AddSingleton<IRepository<AccesoCliente>, Repository<AccesoCliente>>(); "Server=(localdb)\\MSSQLLocalDB; Database = IndustriaAutomotrizData"
+            //services.AddSingleton<IRepository<Cliente>, Repository<Cliente>>();
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
