@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {}
+    "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+    "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\Edward\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\IndustriaAutomotriz\\Dominio\\obj\\",
+        "projectPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Edward\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"

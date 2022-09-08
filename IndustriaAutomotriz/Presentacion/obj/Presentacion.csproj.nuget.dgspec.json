@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj": {}
+    "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+    "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\PAOLA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\obj\\",
+        "projectPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PAOLA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -54,17 +54,17 @@
         }
       }
     },
-    "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj": {
+    "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
+        "projectUniqueName": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
         "projectName": "Persistencia",
-        "projectPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
-        "packagesPath": "C:\\Users\\PAOLA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\obj\\",
+        "projectPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PAOLA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -75,8 +75,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
+              "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+                "projectPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -130,17 +130,17 @@
         }
       }
     },
-    "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj": {
+    "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
+        "projectUniqueName": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
         "projectName": "Presentacion",
-        "projectPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
-        "packagesPath": "C:\\Users\\PAOLA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\obj\\",
+        "projectPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PAOLA\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -151,11 +151,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
+              "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+                "projectPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
               },
-              "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj": {
-                "projectPath": "C:\\Users\\PAOLA\\proyectos-visual\\repositorio\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj"
+              "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj": {
+                "projectPath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj"
               }
             }
           }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NgxdrUYejqIjwufC6BinCEvowhI8vHxP/WoIu1YirfVo/WYB1JDQLiENyIKpjjQV4sXNfSbn5vN6FXmoJgw7WQ==",
+  "dgSpecHash": "1W25tJBAtYbjAXZIkUN3faf1SRE06ypLsQ3MbPC8nUL6174QXjVoauM7SPB63RxOoQgxFk7GOLHR2BkxqsvKAg==",
   "success": true,
-  "projectFilePath": "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+  "projectFilePath": "D:\\c#\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
