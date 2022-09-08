@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DevTic Masters</title>
+    <script src="https://kit.fontawesome.com/8516639b59.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,21 +15,27 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">DevTic Masters</a>
+                <a class="navbar-brand" asp-area="" asp-page="/Index"><i class="fa-solid fa-car-circle-bolt"></i> DevTics Masters</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
+                    <ul class="navbar-nav flex-grow-4">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="#">Quienes Somos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Pruebas">Accesos de Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn-login" onclick="#"><i class="fa-solid fa-users icon-login"></i>  CLIENTES</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn-login" onclick="#"><i class="fa-solid fa-user icon-login"></i>  EMPLEADOS</button>
                         </li>
                     </ul>
                 </div>
@@ -41,9 +48,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted footer-dev">
         <div class="container">
-            &copy; 2022 - Presentacion - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            &copy; DevTics Masters 2022
         </div>
     </footer>
 
