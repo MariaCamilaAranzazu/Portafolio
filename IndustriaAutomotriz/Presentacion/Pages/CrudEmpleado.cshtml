@@ -1,0 +1,186 @@
+@page
+@model Presentacion.Pages.CrudEmpleado
+
+<div class="big-container">
+    <h1>Empleados</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Cedula
+                </th>
+                <th>
+                    CargoId
+                </th>
+                <th>
+                    Telefono
+                </th>
+                <th>
+                    Direccion
+                </th>
+                <th>
+                    Correo
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <form method="post">
+                @foreach (var empleado in Model.empleados)
+                {
+                    <tr>
+                        <td>@empleado.Id</td>
+                        <td>@empleado.Nombre</td>
+                        <td>@empleado.Apellido</td>
+                        <td>@empleado.Cedula</td>
+                        <td>@empleado.CargoId</td>
+                        <td>@empleado.Telefono</td>
+                        <td>@empleado.Direccion</td>
+                        <td>@empleado.Correo</td>
+                        <td class="al-right"><button asp-page-handler="Delete" asp-route-id="@empleado.Id"
+                            onclick="return confirm('¿Está seguro de eliminar este empleado?')"
+                            class="light-buttons">Eliminar</button></td>
+                    </tr>
+                }
+            </form>
+        </tbody>
+    </table>
+
+    <hr>
+    <h1>Registrar Empleado</h1>
+    <div class="shadow">
+        <form method="post">
+            <input type="text" asp-for="NuevoEmpleado.Nombre" placeholder="Nombres" required />
+            <input type="text" asp-for="NuevoEmpleado.Apellido" placeholder="Apellidos" required />
+            <input type="text" asp-for="NuevoEmpleado.Cedula" placeholder="Cedula" required />
+            <input type="text" asp-for="NuevoEmpleado.CargoId" placeholder="Id Cargo" required />
+            <input type="text" asp-for="NuevoEmpleado.Telefono" placeholder="Telefono" required />
+            <input type="text" asp-for="NuevoEmpleado.Direccion" placeholder="Direccion" required />
+            <input type="email" asp-for="NuevoEmpleado.Correo" placeholder="Correo" required />
+            <button type="submit" class="no-light-buttons">Guardar</button>
+        </form>
+    </div>
+
+    <hr>
+    <h1>Actualizar Empleado</h1>
+    <div class="shadow">
+        <form method="post">
+            <input type="text" asp-for="EmpleadoEditar.Cedula" placeholder="Buscar Cédula" required />
+            <input type="text" asp-for="EmpleadoEditar.Nombre" placeholder="Nombres" required />
+            <input type="text" asp-for="EmpleadoEditar.Apellido" placeholder="Apellidos" required />
+            <input type="text" asp-for="EmpleadoEditar.CargoId" placeholder="Id Cargo" required />
+            <input type="text" asp-for="EmpleadoEditar.Telefono" placeholder="Telefono" required />
+            <input type="text" asp-for="EmpleadoEditar.Direccion" placeholder="Direccion" required />
+            <input type="email" asp-for="EmpleadoEditar.Correo" placeholder="Correo" required />
+            <button type="submit" asp-page-handler="Edit" class="no-light-buttons">Editar</button>
+        </form>
+
+    </div>
+</div>
+
+
+
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .big-container {width: 70%;}
+
+    h1 {
+        padding: 5px;
+        background-color: DodgerBlue;
+        color: white;
+        font-size: 23px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .light-buttons {
+        padding: 2px 10px;
+        background-color: DodgerBlue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 1px 10px DodgerBlue;
+        margin: 7px 10px;
+    }
+
+    .no-light-buttons {
+        padding-top: 2px;
+        background-color: DodgerBlue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .light-buttons:hover {
+        background-color: Navy;
+        color: white;
+    }
+
+    .no-light-buttons:hover {
+        background-color: Navy;
+        color: white;
+    }
+
+    th {
+        color: navy;
+        padding: 5px;
+        text-align: center;
+    }
+
+    td {text-align: center;}
+
+    hr {border-top: 1px solid rgba(0, 0, 0, 0.4);}
+
+    .al-right {text-align: right;}
+
+    table {
+        box-shadow: 0px 1px 10px DodgerBlue;
+        border-radius: 15px;
+        width: 100%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .shadow {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        box-shadow: 0px 1px 10px DodgerBlue !important;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .shadow form input {margin: 0px 2px;}
+
+    .shadow form button {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+    }
+
+    tbody {padding: 15px 30px;}
+
+</style>

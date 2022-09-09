@@ -1,0 +1,193 @@
+@page
+@model Presentacion.Pages.CrudRevision
+
+<div class="big-container">
+    <h1>Revisiones</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    C. Cliente
+                </th>
+                <th>
+                    C. Empleado
+                </th>
+                <th>
+                    Placa
+                </th>
+                <th>
+                    Aceite
+                </th>
+                <th>
+                    Filtro Aire 
+                </th>
+                <th>
+                    Filtro Gasolina
+                </th>
+                <th>
+                    Mantenimiento
+                </th>
+                <th>
+                    Observaciones
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <form method="post">
+                @foreach (var revision in Model.revisiones)
+                {
+                    <tr>
+                        <td>@revision.Id</td>
+                        <td>@revision.ClienteCedula</td>
+                        <td>@revision.EmpleadoCedula</td>
+                        <td>@revision.VehiculoPlaca</td>
+                        <td>@revision.EstAceite</td>
+                        <td>@revision.EstFiltroAire</td>
+                        <td>@revision.EstFiltroGasolina</td>
+                        <td>@revision.TipoMantenimiento</td>
+                        <td>@revision.Observaciones</td>
+                        <td class="al-right"><button asp-page-handler="Delete" asp-route-id="@revision.Id"
+                            onclick="return confirm('¿Está seguro de eliminar esta revisión?')"
+                            class="light-buttons">Eliminar</button></td>
+                    </tr>
+                }
+            </form>
+        </tbody>
+    </table>
+
+    <hr>
+    <h1>Registrar Revisión</h1>
+    <div class="shadow">
+        <form method="post">
+            <input type="text" asp-for="NuevaRevision.ClienteCedula" placeholder="C. Cliente" required />
+            <input type="text" asp-for="NuevaRevision.EmpleadoCedula" placeholder="C. Empleado" required />
+            <input type="text" asp-for="NuevaRevision.VehiculoPlaca" placeholder="Placa" required />
+            <input type="text" asp-for="NuevaRevision.EstAceite" placeholder="Aceite" required />
+            <input type="text" asp-for="NuevaRevision.EstFiltroAire" placeholder="Filtro Aire" required />
+            <input type="text" asp-for="NuevaRevision.EstFiltroGasolina" placeholder="Filtro Gasolina" required />
+            <input type="text" asp-for="NuevaRevision.TipoMantenimiento" placeholder="Mantenimiento" required />
+            <input type="text" asp-for="NuevaRevision.Observaciones" placeholder="Observaciones" required />
+            <button type="submit" class="no-light-buttons">Guardar</button>
+        </form>
+    </div>
+
+    <hr>
+    <h1>Actualizar Revisión</h1>
+    <div class="shadow">
+        <form method="post">
+            <input type="text" asp-for="RevisionEditar.Id" placeholder="Buscar por Id" required />
+            <input type="text" asp-for="RevisionEditar.ClienteCedula" placeholder="C.Cliente" required />
+            <input type="text" asp-for="RevisionEditar.EmpleadoCedula" placeholder="C. Empleado" required />
+            <input type="text" asp-for="RevisionEditar.VehiculoPlaca" placeholder="Placa" required />
+            <input type="text" asp-for="RevisionEditar.EstAceite" placeholder="Aceite" required />
+            <input type="text" asp-for="RevisionEditar.EstFiltroAire" placeholder="Filtro Aire" required />
+            <input type="text" asp-for="RevisionEditar.EstFiltroGasolina" placeholder="Filtro Gasolina" required />
+            <input type="text" asp-for="RevisionEditar.TipoMantenimiento" placeholder="Mantenimiento" required />
+            <input type="text" asp-for="RevisionEditar.Observaciones" placeholder="Observaciones" required />
+            <button type="submit" asp-page-handler="Edit" class="no-light-buttons">Editar</button>
+        </form>
+
+    </div>
+</div>
+
+
+
+<style>
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .big-container {width: 70%;}
+
+    h1 {
+        padding: 5px;
+        background-color: DodgerBlue;
+        color: white;
+        font-size: 23px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .light-buttons {
+        padding: 2px 10px;
+        background-color: DodgerBlue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 1px 10px DodgerBlue;
+        margin: 7px 10px;
+    }
+
+    .no-light-buttons {
+        padding-top: 2px;
+        background-color: DodgerBlue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .light-buttons:hover {
+        background-color: Navy;
+        color: white;
+    }
+
+    .no-light-buttons:hover {
+        background-color: Navy;
+        color: white;
+    }
+
+    th {
+        color: navy;
+        padding: 5px;
+        text-align: center;
+    }
+
+    td {text-align: center;}
+
+    hr {border-top: 1px solid rgba(0, 0, 0, 0.4);}
+
+    .al-right {text-align: right;}
+
+    table {
+        box-shadow: 0px 1px 10px DodgerBlue;
+        border-radius: 15px;
+        width: 100%;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .shadow {
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        box-shadow: 0px 1px 10px DodgerBlue !important;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .shadow form input {margin: 0px 2px;}
+
+    .shadow form button {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+    }
+
+    tbody {padding: 15px 30px;}
+
+</style>

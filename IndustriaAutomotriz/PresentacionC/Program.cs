@@ -30,8 +30,8 @@ namespace PresentacionC
             .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; Database = IndustriaAutomotrizData")
             .Options;
             var DBContext = new AppDBContext(contextOptions);
-            var repositorioAccesoC = new Repository<AccesoCliente>(DBContext); //A la instacia Repository<> se le pasa el nombre de la entidad cuya tabla queremos modificar.
-            var accesoC = new AccesoCliente(); //Se crea una nueva instacia con el nombre de la entidad que ajustamos en la linea anterior.
+            var repositorioAccesoC = new Repository<Cliente>(DBContext); //A la instacia Repository<> se le pasa el nombre de la entidad cuya tabla queremos modificar.
+            var accesoC = new Cliente(); //Se crea una nueva instacia con el nombre de la entidad que ajustamos en la linea anterior.
 
             //Descomentar el código de acuerdo a la entidad que queramos crear para pasarle un nuevo registro a la tabla.
             //Corregir el nombre de las variables porque se hicieron con la migración anterior.
@@ -122,14 +122,19 @@ namespace PresentacionC
             Console.WriteLine("Datos asignados a la entidad, correctamente...");
 
             //Encontrar por ID
-            var accesoEncontrado = repositorioAccesoC.GetById(7).Result;
+            //var accesoEncontrado = repositorioAccesoC.GetById(7).Result;
             //Linea para saber que se encontró
-            Console.WriteLine("Se encontró: " + accesoEncontrado.Usuario);
+            //Console.WriteLine("Se encontró: " + accesoEncontrado.Usuario);
 
             //Encontrar por cualquier otro criterio
-            //var accesoEncontrado = repositorioAccesoC.GetBy(c => c.Placa == "ABC 123").Result;
+            var accesoEncontrado = repositorioAccesoC.GetBy(c => c.Cedula == 12345678).Result;
             //Linea para saber que se encontró
-            //Console.WriteLine("Se encontró: " + accesoEncontrado.Contraseña);
+            /*Console.WriteLine("Se encontró: " + accesoEncontrado.Nombre);
+            Console.WriteLine("Se encontró: " + accesoEncontrado.Apellido);
+            Console.WriteLine("Se encontró: " + accesoEncontrado.Cedula);
+            Console.WriteLine("Se encontró: " + accesoEncontrado.Telefono);
+            Console.WriteLine("Se encontró: " + accesoEncontrado.Direccion);
+            Console.WriteLine("Se encontró: " + accesoEncontrado.Correo);*/
 
             //Obtener todos los valores en una lista
             //var accesoEncontrado = repositorioAccesoC.GetAll().Result;

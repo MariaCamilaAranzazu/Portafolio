@@ -68,7 +68,6 @@ D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.Razo
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Pruebas.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
@@ -82,3 +81,9 @@ D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\staticwebassets\P
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.dll
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.pdb
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.genruntimeconfig.cache
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Revisiones.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudCliente.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudVehiculo.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudOrdenes.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudRevision.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudEmpleado.cshtml.g.cs
