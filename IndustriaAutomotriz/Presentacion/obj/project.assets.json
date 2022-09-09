@@ -5835,19 +5835,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Edward\\.nuget\\packages\\": {}
+    "C:\\Users\\Ana Cilia\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
+      "projectUniqueName": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
       "projectName": "Presentacion",
-      "projectPath": "D:\\C#\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
-      "packagesPath": "C:\\Users\\Edward\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\IndustriaAutomotriz\\Presentacion\\obj\\",
+      "projectPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
+      "packagesPath": "C:\\Users\\Ana Cilia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Presentacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Edward\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Ana Cilia\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5858,11 +5858,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
-              "projectPath": "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
+            "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
             },
-            "D:\\C#\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "D:\\C#\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj"
+            "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj": {
+              "projectPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj"
             }
           }
         }
@@ -5911,7 +5911,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.411\\RuntimeIdentifierGraph.json"
       }
     }
   }

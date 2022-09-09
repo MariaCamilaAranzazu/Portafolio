@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {}
+    "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\Edward\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\IndustriaAutomotriz\\Dominio\\obj\\",
+        "projectPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\Ana Cilia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Edward\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Ana Cilia\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -50,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.411\\RuntimeIdentifierGraph.json"
         }
       }
     }
