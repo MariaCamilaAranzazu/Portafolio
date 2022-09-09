@@ -1,0 +1,139 @@
+@page
+@model Presentacion.Pages.Pruebas
+
+<table class= "table">
+    <h1>Tabla de usuarios Clientes: Obtenida desde la base de datos</h1>
+    <thead>
+        <th>
+            Id
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Cedula
+        </th>
+        <th>
+            Telefono
+        </th>
+        <th>
+            Direccion
+        </th>
+        <th>
+            Correo
+        </th>
+    </thead>
+<form method = "post"> 
+    @foreach (var cliente in Model.clientes)
+    {
+        <tr>
+            <td>@cliente.Id</td>
+            <td>@cliente.Nombre</td>
+            <td>@cliente.Apellido</td>
+            <td>@cliente.Cedula</td>
+            <td>@cliente.Telefono</td>
+            <td>@cliente.Direccion</td>
+            <td>@cliente.Correo</td>
+            <td class="botones"><button asp-page-handler="Delete" asp-route-id="@cliente.Id" onclick="return confirm('¿Está seguro de eliminar este cliente?')">Eliminar</button></td>
+        </tr>
+    }
+</form>
+
+</table>
+
+<hr>
+
+<div class="form-container">
+    <form method = "post" class="new-client">
+        <input type="text" asp-for="NuevoCliente.Nombre" placeholder="Nombres"/>
+        <input type="text" asp-for="NuevoCliente.Apellido" placeholder="Apellidos"/>
+        <input type="text" asp-for="NuevoCliente.Cedula" placeholder="Cedula"/>
+        <input type="text" asp-for="NuevoCliente.Telefono" placeholder="Telefono"/>
+        <input type="text" asp-for="NuevoCliente.Direccion" placeholder="Dirección"/>
+        <input type="email" asp-for="NuevoCliente.Correo" placeholder="Correo"/>
+        <button type="submit">Guardar</button>
+    </form>
+</div>
+
+
+<style>
+
+
+    *{
+        font-family: 'Roboto Slab', serif;
+    }
+    button, h1{
+        padding: 5px; 
+        background-color:purple; 
+        color:white; 
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 0px 9px purple;
+        margin: 5px 0px;
+        margin-bottom: 15px;
+        margin-right: 10px;
+    }
+
+    td, th{
+        padding-right: 55px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    th{
+        padding-top: 10px;
+    }
+    
+    hr{
+        font-weight: bold;
+    }
+
+    table{
+        box-shadow: 0px 1px 10px purple;
+        padding: 15px 30px;
+        border-radius: 15px;
+        width: 100%;
+        font-weight: 300;
+    }
+
+    thead{
+        padding: 15px 30px;
+    }
+
+    tbody{
+        padding: 15px 30px;
+    }
+
+    main{
+        display: inline-block !important;
+        <!--box-shadow: 0px 1px 10px purple;
+        padding: 15px;
+        border-radius: 15px;-->
+    }
+    h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .botones{
+        padding: 0px;
+    }
+
+    .form-container{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .new-client{
+        display: flex;
+        width: 40%;
+        flex-wrap: wrap;
+    }
+
+    .new-client input{
+        margin: 10px 5px;
+    }
+</style>

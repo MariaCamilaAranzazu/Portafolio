@@ -18,6 +18,39 @@ a {
   border-color: #1861ac;
 }
 
+.btn-login {
+  width: 163px;
+  height: 52px;
+  padding: 0px 10px 0px 10px;
+  background: #3d8af7;
+  color: #ffffff;
+  border-color: #1464f6;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 19px 19px 19px 19px;
+  /* font-family: "Open Sans"; */
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin: 0px 5px 0px 6px;
+}
+
+.btn-login:hover {
+  background-color: #25569b;
+}
+
+.icon-login{
+  font-size: 30px;
+  align-self: center;
+}
+
+.footer-dev{
+  padding: 8px 8px 8px 8px;
+  background: #3d8af7;
+  text-align: center;
+  color:#ffffff!important;
+}
+
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
