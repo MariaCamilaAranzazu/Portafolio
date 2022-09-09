@@ -1,8 +1,8 @@
 @page
-@model Presentacion.Pages.CrudEmpleado
+@model Presentacion.Pages.CrudAccesoC
 
 <div class="big-container">
-    <h1>Empleados</h1>
+    <h1>Accesos Clientes</h1>
     <table>
         <thead>
             <tr>
@@ -10,43 +10,27 @@
                     Id
                 </th>
                 <th>
-                    Nombre
-                </th>
-                <th>
-                    Apellido
-                </th>
-                <th>
                     Cedula
                 </th>
                 <th>
-                    CargoId
+                    Usuario
                 </th>
                 <th>
-                    Telefono
-                </th>
-                <th>
-                    Direccion
-                </th>
-                <th>
-                    Correo
+                    Contraseña
                 </th>
             </tr>
         </thead>
         <tbody>
             <form method="post">
-                @foreach (var empleado in Model.empleados)
+                @foreach (var accesoC in Model.accesosC)
                 {
                     <tr>
-                        <td>@empleado.Id</td>
-                        <td>@empleado.Nombre</td>
-                        <td>@empleado.Apellido</td>
-                        <td>@empleado.Cedula</td>
-                        <td>@empleado.CargoId</td>
-                        <td>@empleado.Telefono</td>
-                        <td>@empleado.Direccion</td>
-                        <td>@empleado.Correo</td>
-                        <td class="al-right"><button asp-page-handler="Delete" asp-route-id="@empleado.Id"
-                            onclick="return confirm('¿Está seguro de eliminar este empleado?')"
+                        <td>@accesoC.Id</td>
+                        <td>@accesoC.ClienteCedula</td>
+                        <td>@accesoC.Usuario</td>
+                        <td>@accesoC.Contraseña</td>
+                        <td class="al-right"><button asp-page-handler="Delete" asp-route-id="@accesoC.Id"
+                            onclick="return confirm('¿Está seguro de eliminar este acceso?')"
                             class="light-buttons">Eliminar</button></td>
                     </tr>
                 }
@@ -55,31 +39,23 @@
     </table>
 
     <hr>
-    <h1>Registrar Empleado</h1>
+    <h1>Registrar Acceso</h1>
     <div class="shadow">
         <form method="post">
-            <input type="text" asp-for="NuevoEmpleado.Nombre" placeholder="Nombres" required />
-            <input type="text" asp-for="NuevoEmpleado.Apellido" placeholder="Apellidos" required />
-            <input type="text" asp-for="NuevoEmpleado.Cedula" placeholder="Cedula" required />
-            <input type="text" asp-for="NuevoEmpleado.CargoId" placeholder="Id Cargo" required />
-            <input type="text" asp-for="NuevoEmpleado.Telefono" placeholder="Telefono" required />
-            <input type="text" asp-for="NuevoEmpleado.Direccion" placeholder="Direccion" required />
-            <input type="email" asp-for="NuevoEmpleado.Correo" placeholder="Correo" required />
+            <input type="text" asp-for=" NuevoAccesoC.ClienteCedula" placeholder="C. Cliente" required />
+            <input type="text" asp-for=" NuevoAccesoC.Usuario" placeholder="Usuario" required />
+            <input type="text" asp-for=" NuevoAccesoC.Contraseña" placeholder="Contraseña" required />
             <button type="submit" class="no-light-buttons">Guardar</button>
         </form>
     </div>
 
     <hr>
-    <h1>Actualizar Empleado</h1>
+    <h1>Actualizar Acceso</h1>
     <div class="shadow">
         <form method="post">
-            <input type="text" asp-for="EmpleadoEditar.Cedula" placeholder="Buscar Cédula" required />
-            <input type="text" asp-for="EmpleadoEditar.Nombre" placeholder="Nombres" required />
-            <input type="text" asp-for="EmpleadoEditar.Apellido" placeholder="Apellidos" required />
-            <input type="text" asp-for="EmpleadoEditar.CargoId" placeholder="Id Cargo" required />
-            <input type="text" asp-for="EmpleadoEditar.Telefono" placeholder="Telefono" required />
-            <input type="text" asp-for="EmpleadoEditar.Direccion" placeholder="Direccion" required />
-            <input type="email" asp-for="EmpleadoEditar.Correo" placeholder="Correo" required />
+            <input type="text" asp-for=" AccesoCEditar.ClienteCedula" placeholder="Buscar Cédula" required/>
+            <input type="text" asp-for=" AccesoCEditar.Usuario" placeholder="Usuario" required />
+            <input type="text" asp-for=" AccesoCEditar.Contraseña" placeholder="Contraseña" required />
             <button type="submit" asp-page-handler="Edit" class="no-light-buttons">Editar</button>
         </form>
 
@@ -97,7 +73,7 @@
 
     h1 {
         padding: 5px;
-        background-color: royalblue;
+        background-color: DodgerBlue;
         color: white;
         font-size: 23px;
         text-align: center;
@@ -111,17 +87,17 @@
 
     .light-buttons {
         padding: 2px 10px;
-        background-color: DarkKhaki ;
+        background-color: DodgerBlue;
         color: white;
         border: none;
         border-radius: 5px;
-        box-shadow: 0px 1px 10px DarkKhaki ;
+        box-shadow: 0px 1px 10px DodgerBlue;
         margin: 7px 10px;
     }
 
     .no-light-buttons {
         padding-top: 2px;
-        background-color: DarkKhaki ;
+        background-color: DodgerBlue;
         color: white;
         border: none;
         border-radius: 5px;

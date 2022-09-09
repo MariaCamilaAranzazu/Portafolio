@@ -87,3 +87,4 @@ D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.cspr
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\staticwebassets\Presentacion.StaticWebAssets.Manifest.cache
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\staticwebassets\Presentacion.StaticWebAssets.xml
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.genruntimeconfig.cache
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudAccesoC.cshtml.g.cs
