@@ -1,0 +1,36 @@
+﻿@page
+@model IndustriaAutormotriz.App.Presentacion.Pages.ContactoModel
+@{
+    ViewData["Title"] = "Contacto";
+}
+<div class="text-center">
+    <h1 class="display-4 titulo">Contacto</h1>
+    <div class="contenedor-uno">
+        <h2>Envia tu mensaje</h2>
+        <p>Digita tus datos</p>
+        <form method="post">
+            <table>
+                <tr>
+                    <td><label class="label-form">Nombre Completo</label></td>
+                    <td><label class="label-form">Email</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input-form" placeholder="Ingresar nombres completos" required /></td>
+                    <td><input type="text" class="input-form" placeholder="Ingresar email" required /></td>
+                </tr>
+                <tr>
+                    <td><label class="label-form">Celular</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="input-form" placeholder="Ingresar celular" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" class="input-grande" placeholder="Ingrese su mensaje" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button type="submit" class="no-light-buttons button-form" style="align-items: left;">Enviar</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
