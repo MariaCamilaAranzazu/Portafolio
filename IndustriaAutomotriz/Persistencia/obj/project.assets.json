@@ -5815,19 +5815,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ana Cilia\\.nuget\\packages\\": {}
+    "C:\\Users\\USUARIO\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
+      "projectUniqueName": "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
       "projectName": "Persistencia",
-      "projectPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
-      "packagesPath": "C:\\Users\\Ana Cilia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Persistencia\\obj\\",
+      "projectPath": "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
+      "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+      "outputPath": "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ana Cilia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5838,8 +5838,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
+            "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+              "projectPath": "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
             }
           }
         }
@@ -5889,7 +5889,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.411\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
       }
     }
   }

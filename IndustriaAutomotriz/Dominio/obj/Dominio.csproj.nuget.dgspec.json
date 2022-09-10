@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {}
+    "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+    "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
-        "packagesPath": "C:\\Users\\Ana Cilia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ana Cilia\\OneDrive\\Escritorio\\ProyectoMisionTIC\\IndustriaAutomotriz\\Dominio\\obj\\",
+        "projectPath": "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj",
+        "packagesPath": "C:\\Users\\USUARIO\\.nuget\\packages\\",
+        "outputPath": "D:\\c#\\Develop\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ana Cilia\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\USUARIO\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -50,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\3.1.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
         }
       }
     }

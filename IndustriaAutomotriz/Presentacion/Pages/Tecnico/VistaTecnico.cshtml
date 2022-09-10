@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@page
+@model Presentacion.Pages.VistaTecnicoModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -41,17 +46,10 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-4">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="#">Quienes Somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudCliente">CrudC</a>
+                            @* <a class="nav-link text-dark" asp-area="" asp-page="/CrudCliente">CrudC</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/CrudVehiculo">CrudV</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudEmpleado">CrudE</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/CrudRevision">CrudR</a>
@@ -61,30 +59,34 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/CrudAccesoC">CrudAC</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudAccesosE">CrudAE</a>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="./Tecnico/VistaTecnico">Clientes</a>
-                        </li>                       
-                        <li class="nav-item">
-                            <button class="btn-login" onclick=""><i class="fa-solid fa-users icon-login"></i>CLIENTES</button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn-login" onclick="window.location.href = '/Tecnico/VistaTecnico'"asp-page="/Tecnico/VistaTecnico"><i class="fa-solid fa-user icon-login"></i> EMPLEADOS</button>
-                            @* fa-solid fa-user icon-login *@
-                        </li>
+                        </li> *@
+@*                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="">NombreEmpleado</a>
+                        </li> *@
+                            <form class="form-inline my-2 my-lg-0">
+                                <a class="nav-link text-dark" asp-area="" asp-page="">NombreEmpleado</a>
+                            </form>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container2">
-        <main role="main" class="main2">
-            @RenderBody()
-        </main>
-    </div>
+    <div class="container">
+        <div class="col justify-content-center align-items-center vh-100">
+            <div class="text-center">
+                <div class="btn-group btn-group-lg">
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href = '/CrudVehiculo'">Vehiculos</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href = '/CrudRevision'">Revisiones</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href = '/CrudOrdenes'">Ordenes de servicio</button>
+                    <button type="button" class="btn btn-secondary" onclick="window.location.href = '/CrudAccesoC'">Clientes</button>
+                </div>
+            </div>
+                <div class="text-center">
+                    <h1 class="display-4"><i class="fa-solid fa-house"></i>Bienvenidos</h1>
+                    <p>Descripción</p>
+                </div>
+        </div>
+    </div>           
 
     <footer class="border-top footer text-muted footer-dev">
         <div class="container">
@@ -96,6 +98,6 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
-    @RenderSection("Scripts", required: false)
+    @* @RenderSection("Scripts", required: false) *@
 </body>
 </html>
