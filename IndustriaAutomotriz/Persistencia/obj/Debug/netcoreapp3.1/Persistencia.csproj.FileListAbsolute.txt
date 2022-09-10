@@ -27,3 +27,18 @@ D:\c#\Develop\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcorea
 D:\c#\Develop\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.dll
 D:\c#\Develop\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.pdb
 D:\c#\Develop\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.genruntimeconfig.cache
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\bin\Debug\netcoreapp3.1\Persistencia.deps.json
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\bin\Debug\netcoreapp3.1\Persistencia.runtimeconfig.json
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\bin\Debug\netcoreapp3.1\Persistencia.runtimeconfig.dev.json
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\bin\Debug\netcoreapp3.1\Persistencia.dll
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\bin\Debug\netcoreapp3.1\Persistencia.pdb
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\bin\Debug\netcoreapp3.1\Dominio.dll
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\bin\Debug\netcoreapp3.1\Dominio.pdb
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.csprojAssemblyReference.cache
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.AssemblyInfoInputs.cache
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.AssemblyInfo.cs
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.csproj.CoreCompileInputs.cache
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.csproj.CopyComplete
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.dll
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.pdb
+D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.genruntimeconfig.cache
