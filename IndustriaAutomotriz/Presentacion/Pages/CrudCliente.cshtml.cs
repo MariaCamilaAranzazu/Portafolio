@@ -39,6 +39,7 @@ namespace Presentacion.Pages
         public AccesoCliente NuevoAccesoC = new AccesoCliente();
         [BindProperty]
         public Cliente ClienteEditar {get;set;}
+        
         public IActionResult OnPost()
         {
             if (ModelState.IsValid==false)

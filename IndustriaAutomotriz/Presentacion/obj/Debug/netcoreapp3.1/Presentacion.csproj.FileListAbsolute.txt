@@ -188,3 +188,4 @@ D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.genr
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Cruds.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\GestionAccesos.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\EspacioTrabajo.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\MisRevisiones.cshtml.g.cs

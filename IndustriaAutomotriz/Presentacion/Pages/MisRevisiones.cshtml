@@ -1,0 +1,74 @@
+@page
+@model Presentacion.Pages.MisRevisiones
+
+
+<div class="big-container">
+    <span>@Model.aviso</span>
+    <span>@Model.aviso2</span>
+
+    <div>
+        <form method="post">
+
+            <input type="text" placeholder="Criterio de búsqueda" asp-for="cedula">
+            <button type="submit">Buscar</button>
+
+        </form>
+    </div>
+
+    <h1>Mis Revisiones</h1>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        C. Cliente
+                    </th>
+                    <th>
+                        C. Empleado
+                    </th>
+                    <th>
+                        Placa
+                    </th>
+                    <th>
+                        Aceite
+                    </th>
+                    <th>
+                        Filtro Aire
+                    </th>
+                    <th>
+                        Filtro Gasolina
+                    </th>
+                    <th>
+                        Mantenimiento
+                    </th>
+                    <th>
+                        Observaciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model.RevisionesEncontradas != null)
+                    {
+                        foreach (var revision in Model.RevisionesEncontradas)
+                        {
+                            <tr>
+                                <td>@revision.ClienteCedula</td>
+                                <td>@revision.EmpleadoCedula</td>
+                                <td>@revision.VehiculoPlaca</td>
+                                <td>@revision.EstAceite</td>
+                                <td>@revision.EstFiltroAire</td>
+                                <td>@revision.EstFiltroGasolina</td>
+                                <td>@revision.TipoMantenimiento</td>
+                                <td>@revision.Observaciones</td>
+                            </tr>
+
+                        }
+                        /*Console.WriteLine("Print de HTML: " + Model.ClienteEncontrado.Nombre);*/
+                    }
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
