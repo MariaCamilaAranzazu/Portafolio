@@ -1,0 +1,203 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*body{
+    background-image: url("https://static.vecteezy.com/system/resources/previews/006/263/900/non_2x/white-and-blue-tone-abstract-background-backdrop-for-presentation-design-for-website-concept-of-beauty-and-health-business-brochure-free-photo.jpg");
+}*/
+
+.big-container {
+    width: 70%;
+}
+
+h1 {
+    padding: 5px;
+    background-color: royalblue;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+
+.light-buttons {
+    font-size: 16px;
+    padding: 2px 10px;
+    background-color: DarkKhaki;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px DarkKhaki;
+    margin: 7px 10px;
+}
+
+.no-light-buttons {
+    padding-top: 2px;
+    background-color: DarkKhaki;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.light-buttons:hover {
+    background-color: Navy;
+    color: white;
+}
+
+.no-light-buttons:hover {
+    background-color: Navy;
+    color: white;
+}
+
+th {
+    color: navy;
+    padding: 5px;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
+hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    margin: 15px 0px;
+}
+
+.al-right {
+    text-align: right;
+}
+
+table {
+    width: 100%;
+}
+
+.shadow {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    box-shadow: 0px 1px 10px DodgerBlue !important;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.shadow form input {
+    margin: 0px auto;
+    width: 32%;
+    background-color: aliceblue;
+    border: 1px solid rgba(170, 169, 169, 0.979);
+}
+
+.shadow form button {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+}
+
+tbody {
+    padding: 15px 30px;
+}
+
+.overflow{
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.col1 {
+    margin-right: 20px;
+    background: white;
+    width: 49%;
+}
+
+.col2 {
+    border: white;
+    background: white;
+    width: 49%;
+}
+
+.row {
+    display: inline-flex;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.container-fluid {
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mini-containerA {
+    width: 48%;
+    margin-right: 40px;
+}
+
+.mini-containerB {
+    width: 48%;
+}
+
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+    box-shadow: 0px 1px 10px DodgerBlue;
+    border-radius: 15px;
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+@media screen and (max-width: 1260px){
+    input{
+        display: block !important;
+        width: 90% !important;
+        margin: 0px auto !important;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        border: 1px solid #ddd;
+    }
+
+    .table-responsive>.table {
+        margin-bottom: 0;
+    }
+
+    .table-responsive>.table>thead>tr>th,
+    .table-responsive>.table>tbody>tr>th,
+    .table-responsive>.table>tfoot>tr>th,
+    .table-responsive>.table>thead>tr>td,
+    .table-responsive>.table>tbody>tr>td,
+    .table-responsive>.table>tfoot>tr>td {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width:392px){
+    i{
+        font-size: 60px !important;
+    }
+    h1{
+        font-size: 15px !important;
+    }
+}

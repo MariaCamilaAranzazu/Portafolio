@@ -3,178 +3,89 @@
 
 <div class="big-container">
     <h1>Vehiculos</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>
-                    Id
-                </th>
-                <th>
-                    Tipo
-                </th>
-                <th>
-                    Placa
-                </th>
-                <th>
-                    Cedula
-                </th>
-                <th>
-                    Marca
-                </th>
-                <th>
-                    Modelo
-                </th>
-                <th>
-                    Color
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <form method="post">
-                @foreach (var vehiculo in Model.vehiculos)
-                {
-                    <tr>
-                        <td>@vehiculo.Id</td>
-                        <td>@vehiculo.Tipo</td>
-                        <td>@vehiculo.Placa</td>
-                        <td>@vehiculo.CliCedula</td>
-                        <td>@vehiculo.Marca</td>
-                        <td>@vehiculo.Modelo</td>
-                        <td>@vehiculo.Color</td>
-                        <td class="al-right"><button asp-page-handler="Delete" asp-route-id="@vehiculo.Id"
-                            onclick="return confirm('¿Está seguro de eliminar este vehículo?')"
-                            class="light-buttons">Eliminar</button></td>
-                    </tr>
-                }
-            </form>
-        </tbody>
-    </table>
-
-    <hr>
-    <h1>Registrar Vehiculo</h1>
-    <div class="shadow">
-        <form method="post">
-            <input type="text" asp-for="NuevoVehiculo.Tipo" placeholder="Tipo" required />
-            <input type="text" asp-for="NuevoVehiculo.Placa" placeholder="Placa" required />
-            <input type="text" asp-for="NuevoVehiculo.CliCedula" placeholder="Cedula" required />
-            <input type="text" asp-for="NuevoVehiculo.Marca" placeholder="Marca" required />
-            <input type="text" asp-for="NuevoVehiculo.Modelo" placeholder="Modelo" required />
-            <input type="text" asp-for="NuevoVehiculo.Color" placeholder="Color" required />
-            <button type="submit" class="no-light-buttons">Guardar</button>
-        </form>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Tipo
+                    </th>
+                    <th>
+                        Placa
+                    </th>
+                    <th>
+                        Cedula
+                    </th>
+                    <th>
+                        Marca
+                    </th>
+                    <th>
+                        Modelo
+                    </th>
+                    <th>
+                        Color
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <form method="post">
+                    @foreach (var vehiculo in Model.vehiculos)
+                    {
+                        <tr>
+                            <td>@vehiculo.Id</td>
+                            <td>@vehiculo.Tipo</td>
+                            <td>@vehiculo.Placa</td>
+                            <td>@vehiculo.CliCedula</td>
+                            <td>@vehiculo.Marca</td>
+                            <td>@vehiculo.Modelo</td>
+                            <td>@vehiculo.Color</td>
+                            <td class="al-right"><button asp-page-handler="Delete" asp-route-id="@vehiculo.Id"
+                                onclick="return confirm('¿Está seguro de eliminar este vehículo?')"
+                                class="light-buttons">Eliminar</button></td>
+                        </tr>
+                    }
+                </form>
+            </tbody>
+        </table>
     </div>
-
     <hr>
-    <h1>Actualizar Vehiculo</h1>
-    <div class="shadow">
-        <form method="post">
-            <input type="text" asp-for="VehiculoEditar.Placa" placeholder="Buscar por Placa" required />
-            <input type="text" asp-for="VehiculoEditar.Tipo" placeholder="Tipo" required />
-            <input type="text" asp-for="VehiculoEditar.CliCedula" placeholder="Cedula" required />
-            <input type="text" asp-for="VehiculoEditar.Marca" placeholder="Marca" required />
-            <input type="text" asp-for="VehiculoEditar.Modelo" placeholder="Modelo" required />
-            <input type="text" asp-for="VehiculoEditar.Color" placeholder="Color" required />
-            <button type="submit" asp-page-handler="Edit" class="no-light-buttons">Editar</button>
-        </form>
+    <div class="container-fluid">
+        <div class="mini-containerA">
+            <div>
+                <h1>Registrar Vehiculo</h1>
+            </div>
+            <div class="shadow">
+                <form method="post" class="overflow">
+                    <input type="text" asp-for="NuevoVehiculo.Tipo" placeholder="Tipo" required />
+                    <input type="text" asp-for="NuevoVehiculo.Placa" placeholder="Placa" required />
+                    <input type="text" asp-for="NuevoVehiculo.CliCedula" placeholder="Cedula" required />
+                    <input type="text" asp-for="NuevoVehiculo.Marca" placeholder="Marca" required />
+                    <input type="text" asp-for="NuevoVehiculo.Modelo" placeholder="Modelo" required />
+                    <input type="text" asp-for="NuevoVehiculo.Color" placeholder="Color" required />
+                    <button type="submit" class="no-light-buttons">Guardar</button>
+                </form>
+            </div>
+        </div>
+        <div class="mini-containerB">
+            <div>
+                <h1>Actualizar Vehiculo</h1>
+            </div>
 
+            <div class="shadow">
+                <form method="post" class="overflow">
+                    <input type="text" asp-for="VehiculoEditar.Placa" placeholder="Buscar por Placa" required />
+                    <input type="text" asp-for="VehiculoEditar.Tipo" placeholder="Tipo" required />
+                    <input type="text" asp-for="VehiculoEditar.CliCedula" placeholder="Cedula" required />
+                    <input type="text" asp-for="VehiculoEditar.Marca" placeholder="Marca" required />
+                    <input type="text" asp-for="VehiculoEditar.Modelo" placeholder="Modelo" required />
+                    <input type="text" asp-for="VehiculoEditar.Color" placeholder="Color" required />
+                    <button type="submit" asp-page-handler="Edit" class="no-light-buttons">Editar</button>
+                </form>
+
+            </div>
+        </div>
     </div>
 </div>
-
-
-
-<style>
-    * {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .big-container {width: 70%;}
-
-    h1 {
-        padding: 5px;
-        background-color: DodgerBlue;
-        color: white;
-        font-size: 23px;
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 5px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
-    }
-
-    .light-buttons {
-        padding: 2px 10px;
-        background-color: DodgerBlue;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 0px 1px 10px DodgerBlue;
-        margin: 7px 10px;
-    }
-
-    .no-light-buttons {
-        padding-top: 2px;
-        background-color: DodgerBlue;
-        color: white;
-        border: none;
-        border-radius: 5px;
-    }
-
-    .light-buttons:hover {
-        background-color: Navy;
-        color: white;
-    }
-
-    .no-light-buttons:hover {
-        background-color: Navy;
-        color: white;
-    }
-
-    th {
-        color: navy;
-        padding: 5px;
-        text-align: center;
-    }
-
-    td {text-align: center;}
-
-    hr {border-top: 1px solid rgba(0, 0, 0, 0.4);}
-
-    .al-right {text-align: right;}
-
-    table {
-        box-shadow: 0px 1px 10px DodgerBlue;
-        border-radius: 15px;
-        width: 100%;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-
-    .shadow {
-        padding-top: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 5px;
-        box-shadow: 0px 1px 10px DodgerBlue !important;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-    }
-
-    .shadow form input {margin: 0px 2px;}
-
-    .shadow form button {
-        display: block;
-        width: 100%;
-        margin-top: 15px;
-        margin-bottom: 0px;
-        border-radius: 10px;
-    }
-
-    tbody {padding: 15px 30px;}
-
-</style>

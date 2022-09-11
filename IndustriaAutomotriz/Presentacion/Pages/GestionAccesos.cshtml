@@ -1,0 +1,103 @@
+@page
+@model Presentacion.Pages.GestionAccesos
+
+<div class="organizador">
+    <div class="encabezado">
+        <div>
+            <i class="bi bi-journal-bookmark" style="font-size: 50px; line-height:0px; color:aliceblue; margin-left:15px;"></i>
+        </div>
+        <div>
+            <h1 class="administrador">Gestión de Accesos</h1>
+        </div>
+    </div>
+    <div class="container-fluid alineamiento">
+        <div class="mini-containerA size">
+            <div>
+                <h1>Externos</h1>
+            </div>
+            <div>
+                <div class="">
+                    <a href="/CrudAccesoC">
+                        <i class="bi bi-file-earmark-person-fill iconos" style="font-size:120px; line-height:0px; color:#b5b073"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mini-containerB size">
+            <div>
+                <h1>Internos</h1>
+            </div>
+            <div class="">
+                <a href="/CrudAccesosE">
+                    <i class="bi bi-briefcase-fill iconos" style="font-size:128px; line-height:0px; color:#b5b073"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    h1 {
+        font-size: 27px;
+        color: royalblue;
+        background-color: aliceblue;
+        font-weight: 600;
+    }
+
+    .administrador{
+        color: aliceblue;
+        background-color: royalblue;
+        margin-left: 20px;
+    }
+
+
+    .organizador {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .encabezado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: royalblue;
+        color: white;
+        padding: 15px 0px;
+    }
+
+    .organizador-td {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .alineamiento {
+        margin-top: 190px;
+    }
+
+    .size {
+        width: 30%;
+        text-align: center;
+    }
+
+    .container-fluid {
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    svg {
+        object-fit: cover;
+    }
+
+    .iconos{
+    }
+
+    .iconos:hover{
+        color:MediumVioletRed !important;
+    }
+</style>
+
+<style type="text/css" media="screen (max-width:390px)">
+    i{
+        font-size: 50px;
+    }
+</style>

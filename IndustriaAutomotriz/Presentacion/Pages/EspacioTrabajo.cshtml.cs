@@ -8,17 +8,14 @@ using Microsoft.Extensions.Logging;
 
 namespace Presentacion.Pages
 {
-    public class AdmPerfiles : PageModel
+    public class EspacioTrabajo : PageModel
     {
-        private readonly ILogger<AdmPerfiles> _logger;
+        private readonly ILogger<EspacioTrabajo> _logger;
 
-        public AdmPerfiles(ILogger<AdmPerfiles> logger)
+        public EspacioTrabajo(ILogger<EspacioTrabajo> logger)
         {
             _logger = logger;
         }
-        
-        
-
 
         public void OnGet()
         {
