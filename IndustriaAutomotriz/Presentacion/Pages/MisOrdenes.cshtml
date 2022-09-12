@@ -1,0 +1,37 @@
+@page
+@model Presentacion.Pages.MisOrdenes
+
+<div class="big-container">
+    <div>
+        <form method="post">
+            <input type="text" placeholder="Ingrese el revId :" asp-for="revId">
+            <button type="submit">Buscar por revId</button>
+
+        </form>
+    </div>
+    <h1>Mis Ordenes</h1>
+    <div class="table-responsive">
+        <table>
+            @{
+                if (Model.OrdenesEncontradas != null)
+                {
+                    foreach (var orden in Model.OrdenesEncontradas)
+                    {
+                        <tr>
+                            <td>@orden.RevId</td>
+                            <td>@orden.EmpCedula</td>
+                            <td>@orden.ActSoftware</td>
+                            <td>@orden.InstRepuestos</td>
+                            <td>@orden.CostoRespuestos</td>
+                            <td>@orden.CostoServicio</td>
+                            <td>@orden.TotalPagar</td>
+                            <td>@orden.Observaciones</td>
+                        </tr>
+                    }
+                }
+
+            }
+        </table>
+
+    </div>
+</div>

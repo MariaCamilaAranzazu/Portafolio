@@ -5815,19 +5815,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Edward\\.nuget\\packages\\": {}
+    "C:\\Users\\Nathalia Reyes\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
+      "projectUniqueName": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
       "projectName": "Persistencia",
-      "projectPath": "D:\\C#\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
-      "packagesPath": "C:\\Users\\Edward\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\IndustriaAutomotriz\\Persistencia\\obj\\",
+      "projectPath": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj",
+      "packagesPath": "C:\\Users\\Nathalia Reyes\\.nuget\\packages\\",
+      "outputPath": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Edward\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Nathalia Reyes\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5838,8 +5838,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
-              "projectPath": "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
+            "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+              "projectPath": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
             }
           }
         }
