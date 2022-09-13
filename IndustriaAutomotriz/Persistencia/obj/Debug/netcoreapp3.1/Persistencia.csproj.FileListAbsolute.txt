@@ -57,3 +57,4 @@ D:\C#\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.cspr
 D:\C#\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.dll
 D:\C#\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.pdb
 D:\C#\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.genruntimeconfig.cache
+C:\Users\Ana Cilia\OneDrive\Escritorio\ProyectoMisionTIC\IndustriaAutomotriz\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.csprojAssemblyReference.cache
