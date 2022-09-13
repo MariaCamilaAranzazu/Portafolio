@@ -4,32 +4,42 @@
 <div class="organizador">
     <div class="encabezado">
         <div>
-            <i class="bi bi-journal-bookmark" style="font-size: 50px; line-height:0px; color:aliceblue; margin-left:15px;"></i>
+            <i class="bi bi-list-stars" style="font-size:50px; line-height:0px; color:aliceblue; margin-left:15px;"></i>
         </div>
         <div>
             <h1 class="administrador">Gestión de Accesos</h1>
         </div>
     </div>
-    <div class="container-fluid alineamiento">
-        <div class="mini-containerA size">
+    <div class="container-fluid center">
+        <div class="txtAlign">
             <div>
                 <h1>Externos</h1>
             </div>
             <div>
-                <div class="">
+                <div class="txtAlign">
                     <a href="/CrudAccesoC">
-                        <i class="bi bi-file-earmark-person-fill iconos" style="font-size:120px; line-height:0px; color:#b5b073"></i>
+                        <i class="bi bi-plugin iconos" style="font-size:128px; line-height:0px; color:#b5b073"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="mini-containerB size">
+        <div class="txtAlign">
             <div>
                 <h1>Internos</h1>
             </div>
             <div class="">
                 <a href="/CrudAccesosE">
-                    <i class="bi bi-briefcase-fill iconos" style="font-size:128px; line-height:0px; color:#b5b073"></i>
+                    <i class="bi bi-building iconos" style="font-size:128px; line-height:0px; color:#b5b073"></i>
+                </a>
+            </div>
+        </div>
+        <div class="txtAlign">
+            <div>
+                <h1>Empleados</h1>
+            </div>
+            <div class="">
+                <a href="/CrudEmpleado">
+                    <i class="bi bi-person-workspace iconos" style="font-size:128px; line-height:0px; color:#b5b073"></i>
                 </a>
             </div>
         </div>
@@ -43,7 +53,7 @@
         font-weight: 600;
     }
 
-    .administrador{
+    .administrador {
         color: aliceblue;
         background-color: royalblue;
         margin-left: 20px;
@@ -64,40 +74,43 @@
         color: white;
         padding: 15px 0px;
     }
-
-    .organizador-td {
-        display: flex;
-        flex-direction: row;
+    
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
 
     .alineamiento {
         margin-top: 190px;
     }
 
-    .size {
-        width: 30%;
+    .txtAlign {
         text-align: center;
     }
 
     .container-fluid {
-        justify-content: space-around;
-        width: 80%;
+        justify-content: space-evenly;
+        width: 70%;
+        flex-wrap: wrap;
     }
 
     svg {
         object-fit: cover;
     }
 
-    .iconos{
-    }
+    .iconos {}
 
-    .iconos:hover{
-        color:MediumVioletRed !important;
+    .iconos:hover {
+        color: MediumVioletRed !important;
     }
 </style>
 
 <style type="text/css" media="screen (max-width:390px)">
-    i{
+    i {
         font-size: 50px;
     }
 </style>

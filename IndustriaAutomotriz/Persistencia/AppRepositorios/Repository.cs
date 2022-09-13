@@ -15,7 +15,7 @@ using Dominio.Entidades;
 
 namespace Persistencia.AppRepositorios
 {
-    public class Repository<T> : IRepository<T> where T : class//, IEntity
+    public class Repository<T> : IRepository<T> where T : class
     {
         public AppDBContext _context;
         public DbSet<T> table;

@@ -193,3 +193,4 @@ D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Presentacio
 D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\GestionAccesos.cshtml.g.cs
 D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\MisRevisiones.cshtml.g.cs
 D:\Natalia Reyes\Documents\devtic\DevTic-Masters\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\MisOrdenes.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\MisOrdenes.cshtml.g.cs

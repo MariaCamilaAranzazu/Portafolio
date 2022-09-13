@@ -2,12 +2,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*body{
-    background-image: url("https://static.vecteezy.com/system/resources/previews/006/263/900/non_2x/white-and-blue-tone-abstract-background-backdrop-for-presentation-design-for-website-concept-of-beauty-and-health-business-brochure-free-photo.jpg");
-}*/
-
 .big-container {
-    width: 70%;
+    width: 71%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 
 h1 {
@@ -24,17 +23,18 @@ h1 {
     border-bottom-right-radius: 0px;
 }
 
-
-
 .light-buttons {
-    font-size: 16px;
-    padding: 2px 10px;
+    padding-top: 2px;
+    padding-bottom: 1.5px;
+    padding-left: 8px;
+    padding-right: 8px;
     background-color: #b5b073;
     color: white;
     border: none;
     border-radius: 5px;
     box-shadow: 0px 1px 10px #b5b073;
-    margin: 7px 10px;
+    margin-bottom: 6px;
+    margin-left: 5px;
 }
 
 .no-light-buttons {
@@ -57,22 +57,44 @@ h1 {
 
 th {
     color: navy;
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
     text-align: center;
+    font-size: 17px;
 }
 
 td {
     text-align: center;
+    font-size: 15px;
+}
+
+input {
+    display: initial;
+    flex-direction: row;
+    width: 32%;
+    /*margin: 0px auto !important;*/
+    font-size: 15px;
+}
+
+input::placeholder{
+    font-size: 14px;
 }
 
 hr {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
-    
     margin: 15px 0px;
+    position: relative;
+    top: 0.8%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .al-right {
-    text-align: right;
+    display: flex;
+    /*text-align: right;*/
 }
 
 table {
@@ -110,12 +132,13 @@ tbody {
     padding: 15px 30px;
 }
 
-.overflow{
+.overflow {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
+
 .col1 {
     margin-right: 20px;
     background: white;
@@ -135,20 +158,45 @@ tbody {
 }
 
 .container-fluid {
-    padding: 0px 0px;
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.container-fluid2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 20px;
 }
 
 .mini-containerA {
-    width: 48%;
-    margin-right: 40px;
+    margin-right: 20px;
+
 }
 
 .mini-containerB {
-    width: 48%;
+    margin-left: 20px;
+
+}
+
+.width-ajustado {
+    width: 49%;
+}
+
+.centerTablasPequeñas {
+    margin: 0;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .table-responsive {
@@ -164,41 +212,11 @@ tbody {
 }
 
 
-@media screen and (max-width: 1260px){
+@
+/*media screen and (max-width: 1260px){
     input{
         display: block !important;
         width: 90% !important;
         margin: 0px auto !important;
     }
-}
-
-@media screen and (max-width: 767px){
-    .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-y: hidden;
-        border: 1px solid #ddd;
-    }
-
-    .table-responsive>.table {
-        margin-bottom: 0;
-    }
-
-    .table-responsive>.table>thead>tr>th,
-    .table-responsive>.table>tbody>tr>th,
-    .table-responsive>.table>tfoot>tr>th,
-    .table-responsive>.table>thead>tr>td,
-    .table-responsive>.table>tbody>tr>td,
-    .table-responsive>.table>tfoot>tr>td {
-        white-space: nowrap;
-    }
-}
-
-@media screen and (max-width:392px){
-    i{
-        font-size: 60px !important;
-    }
-    h1{
-        font-size: 15px !important;
-    }
-}
+}*/

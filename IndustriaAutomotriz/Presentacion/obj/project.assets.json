@@ -5835,19 +5835,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nathalia Reyes\\.nuget\\packages\\": {}
+    "C:\\Users\\Edward\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
+      "projectUniqueName": "D:\\C#\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
       "projectName": "Presentacion",
-      "projectPath": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
-      "packagesPath": "C:\\Users\\Nathalia Reyes\\.nuget\\packages\\",
-      "outputPath": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Presentacion\\obj\\",
+      "projectPath": "D:\\C#\\IndustriaAutomotriz\\Presentacion\\Presentacion.csproj",
+      "packagesPath": "C:\\Users\\Edward\\.nuget\\packages\\",
+      "outputPath": "D:\\C#\\IndustriaAutomotriz\\Presentacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nathalia Reyes\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Edward\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5858,11 +5858,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
-              "projectPath": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
+            "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj": {
+              "projectPath": "D:\\C#\\IndustriaAutomotriz\\Dominio\\Dominio.csproj"
             },
-            "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "D:\\Natalia Reyes\\Documents\\devtic\\DevTic-Masters\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj"
+            "D:\\C#\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj": {
+              "projectPath": "D:\\C#\\IndustriaAutomotriz\\Persistencia\\Persistencia.csproj"
             }
           }
         }
