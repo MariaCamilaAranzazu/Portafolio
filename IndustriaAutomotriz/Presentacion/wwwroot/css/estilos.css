@@ -212,11 +212,50 @@ tbody {
 }
 
 
-@
-/*media screen and (max-width: 1260px){
+
+/*@media screen and (max-width: 1260px){
     input{
         display: block !important;
         width: 90% !important;
         margin: 0px auto !important;
     }
 }*/
+
+@media screen and (max-width: 1360px){
+    th {
+        font-size: 14px;
+    }
+    
+    td {
+        font-size: 12px;
+    }
+    
+    input {
+        width: 48% !important;
+        margin-top: 5px !important;
+    }
+    
+    input::placeholder{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 539px){
+    th {
+        font-size: 11px;
+    }
+    
+    td {
+        font-size: 9px;
+    }
+    
+    input {
+        width: 90% !important;
+        margin: 0px auto;
+        margin-top: 5px !important;
+    }
+    
+    input::placeholder{
+        font-size: 9px;
+    }
+}

@@ -12,17 +12,35 @@
     </div>
     <div class="container-fluid" style="margin-top:30px;">
         <div class="txtAlign">
-            <div>
+            <div style="display: flex; flex-direction:Row;">
                 <div class="">
-                    <i class="bi bi-file-earmark-person-fill" style="font-size:128px; line-height:0px; color:#b5b073"></i>
+                    <i class="bi bi-file-earmark-person-fill" style="font-size:140px; line-height:0px; color:#b5b073"></i>
                 </div>
-                <div>
-                    <td>Nombres</td>
-                    <td>Apellidos</td>
-                    <td>Cedula</td>
-                    <td>Telefono</td>
-                    <td>Direccion</td>
-                    <td>Correo</td>
+                <div class="info">
+                    <div class="info-set">
+                        <span>Nombres</span>
+                        <span>********</span>
+                    </div>
+                    <div class="info-set">
+                        <span>Apellidos</span>
+                        <span>********</span>
+                    </div>
+                    <div class="info-set">
+                        <span>Cedula</span>
+                        <span>********</span>
+                    </div>
+                    <div class="info-set">
+                        <span>Telefono</span>
+                        <span>********</span>
+                    </div>
+                    <div class="info-set">
+                        <span>Direccion</span>
+                        <span>********</span>
+                    </div>
+                    <div class="info-set">
+                        <span>Correo</span>
+                        <span>********</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,7 +51,7 @@
                 <h1>Vehiculos</h1>
             </div>
             <div class="">
-                <a href="/CrudVehiculo">
+                <a href="/MisVehiculos">
                     <i class="bi bi-car-front iconos" style="font-size:128px; line-height:0px; color:#b5b073"></i>
                 </a>
             </div>
@@ -61,6 +79,22 @@
     </div>
 </div>
 <style>
+
+    .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    }
+
+    .info-set{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info-set span{
+        margin-right: 5px;
+    }
+    
     h1 {
         font-size: 27px;
         color: royalblue;
@@ -113,8 +147,8 @@
     }
 
     .container-fluid {
-        justify-content: space-evenly;
-        width: 70%;
+        justify-content: space-around;
+        width: 100%;
         flex-wrap: wrap;
     }
 

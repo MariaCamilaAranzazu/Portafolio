@@ -9,28 +9,58 @@
 
         </form>
     </div>
-    <h1>Mis Ordenes</h1>
+    <h1>Mis Órdenes</h1>
     <div class="table-responsive">
         <table>
-            @{
-                if (Model.OrdenesEncontradas != null)
-                {
-                    foreach (var orden in Model.OrdenesEncontradas)
+            <thead>
+                <tr>
+                    <th>
+                        #Rev
+                    </th>
+                    <th>
+                        #Tec
+                    </th>
+                    <th>
+                        Act.Soft
+                    </th>
+                    <th>
+                        Inst.Rep
+                    </th>
+                    <th>
+                        $Rep
+                    </th>
+                    <th>
+                        $Servicio
+                    </th>
+                    <th>
+                        $Pagar
+                    </th>
+                    <th>
+                        Observaciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model.OrdenesEncontradas != null)
                     {
-                        <tr>
-                            <td>@orden.RevId</td>
-                            <td>@orden.EmpCedula</td>
-                            <td>@orden.ActSoftware</td>
-                            <td>@orden.InstRepuestos</td>
-                            <td>@orden.CostoRespuestos</td>
-                            <td>@orden.CostoServicio</td>
-                            <td>@orden.TotalPagar</td>
-                            <td>@orden.Observaciones</td>
-                        </tr>
+                        foreach (var orden in Model.OrdenesEncontradas)
+                        {
+                            <tr>
+                                <td>@orden.RevId</td>
+                                <td>@orden.EmpCedula</td>
+                                <td>@orden.ActSoftware</td>
+                                <td>@orden.InstRepuestos</td>
+                                <td>@orden.CostoRespuestos</td>
+                                <td>@orden.CostoServicio</td>
+                                <td>@orden.TotalPagar</td>
+                                <td>@orden.Observaciones</td>
+                            </tr>
+                        }
                     }
-                }
 
-            }
+                }
+            </tbody>
         </table>
 
     </div>

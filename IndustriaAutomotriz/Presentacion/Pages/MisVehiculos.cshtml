@@ -1,0 +1,58 @@
+@page
+@model Presentacion.Pages.MisVehiculos
+
+<div class="big-container">
+    <div>
+        <form method="post">
+            <input type="text" placeholder="Ingrese cédula" asp-for="cedula">
+            <button type="submit">Buscar</button>
+
+        </form>
+    </div>
+    <h1>Mis Vehículos</h1>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Tipo
+                    </th>
+                    <th>
+                        Placa
+                    </th>
+                    <th>
+                        Cedula
+                    </th>
+                    <th>
+                        Marca
+                    </th>
+                    <th>
+                        Modelo
+                    </th>
+                    <th>
+                        Color
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model.VehiculosEncontrados != null)
+                    {
+                        foreach (var vehiculo in Model.VehiculosEncontrados)
+                        {
+                            <tr>
+                                <td>@vehiculo.Tipo</td>
+                                <td>@vehiculo.Placa</td>
+                                <td>@vehiculo.CliCedula</td>
+                                <td>@vehiculo.Marca</td>
+                                <td>@vehiculo.Modelo</td>
+                                <td>@vehiculo.Color</td>
+                            </tr>
+                        }
+                    }
+
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
