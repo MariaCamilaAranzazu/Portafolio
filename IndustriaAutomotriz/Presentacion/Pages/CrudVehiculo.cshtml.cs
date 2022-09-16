@@ -42,6 +42,8 @@ namespace Presentacion.Pages
             {
                 return Page();
             }
+
+            NuevoVehiculo.FechaCreacion = DateTime.Now;
             repoVehiculo.Insert(NuevoVehiculo);
             /*NuevoAccesoC.ClienteCedula = 5100100;
             NuevoAccesoC.Usuario = "Martha";

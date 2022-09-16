@@ -16,7 +16,7 @@ namespace Dominio.Entidades
         public string Apellido {get;set;}
         [Required,Range(1,2100000000,ErrorMessage="valor de 1 a 2100000000")]
         public int Cedula {get;set;}
-        [Required,Range(1,2100000000,ErrorMessage="valor de 1 a 91000000000000")]
+        [Required,Range(1,91000000000000,ErrorMessage="valor de 1 a 91000000000000")]
         public long Telefono {get;set;}
         [Required,StringLength(100)]
         public string Direccion {get;set;}

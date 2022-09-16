@@ -58,6 +58,7 @@ namespace Presentacion.Pages
                 return NotFound();
             }
 
+            empleado.FechaCreacion = DateTime.Now;
             repoEmpleado.Delete(empleado);
             return RedirectToPage("/CrudEmpleado");
         }

@@ -62,6 +62,7 @@ namespace Presentacion.Pages
                 return NotFound();
             }
 
+            cliente.FechaCreacion = DateTime.Now;
             repoCliente.Delete(cliente);
             return RedirectToPage("/CrudCliente");
         }
@@ -80,7 +81,6 @@ namespace Presentacion.Pages
             cliente.Telefono = ClienteEditar.Telefono;
             cliente.Direccion= ClienteEditar.Direccion;
             cliente.Correo = ClienteEditar.Correo;
-            //cliente.FechaCreacion = DateTime.Now;
             repoCliente.Update(cliente);
 
             return RedirectToPage("/CrudCliente");

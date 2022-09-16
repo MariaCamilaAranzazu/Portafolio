@@ -42,6 +42,7 @@ namespace Presentacion.Pages
             {
                 return Page();
             }
+            NuevoAccesoC.FechaCreacion = DateTime.Now;
             repoAccesoC.Insert(NuevoAccesoC);
             return RedirectToPage("/CrudAccesoC");
         }

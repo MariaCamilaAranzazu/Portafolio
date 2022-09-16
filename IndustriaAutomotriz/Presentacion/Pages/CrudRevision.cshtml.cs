@@ -58,6 +58,7 @@ namespace Presentacion.Pages
                 return NotFound();
             }
 
+            revision.FechaCreacion = DateTime.Now;
             repoRevision.Delete(revision);
             return RedirectToPage("/CrudRevision");
         }

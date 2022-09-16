@@ -58,6 +58,7 @@ namespace Presentacion.Pages
                 return NotFound();
             }
 
+            orden.FechaCreacion = DateTime.Now;
             repoOrden.Delete(orden);
             return RedirectToPage("/CrudOrdenes");
         }
