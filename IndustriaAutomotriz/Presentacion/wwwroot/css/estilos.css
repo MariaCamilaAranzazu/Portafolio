@@ -99,16 +99,12 @@ hr {
 }
 
 .al-right {
-    display: flex;
+    /*display: flex;*/
     /*text-align: right;*/
 }
 
 table {
     width: 100%;
-}
-
-td{
-    text-align: left !important;
 }
 
 .shadow {
@@ -139,7 +135,7 @@ td{
 }
 
 tbody {
-    padding: 15px 30px;
+    /*padding: 15px 30px;*/
 }
 
 .overflow {
