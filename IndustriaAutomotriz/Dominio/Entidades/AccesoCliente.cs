@@ -9,14 +9,19 @@ namespace Dominio.Entidades
 {
     public class AccesoCliente
     {
+        public AccesoCliente()
+        {FechaCreacion = DateTime.Now;}
+        
         public int Id {get;set;}
-        [Required,Range(1,2100000000,ErrorMessage="valor de 1 a 2100000000")]
+
         public int ClienteCedula {get;set;}
-        [Required,StringLength(100)]
+
+        [StringLength(50)]
         public string Usuario {get;set;}
-        [Required,StringLength(100)]
+
+        [StringLength(50)]
         public string Contraseña {get;set;}
-        [Required]
+        
         public DateTime FechaCreacion{get;set;}
     }
 }

@@ -19,50 +19,37 @@ namespace Presentacion.Pages
             _logger = logger;
         }*/
 
-        private readonly IRepository<Cliente> repoCliente; 
-        private readonly IRepository<AccesoCliente> repoAccesoC;
-        public IEnumerable<Cliente> clientes {get;set;}
+        private readonly IRepository<Cliente> repoCliente;
 
-        public CrudCliente(IRepository<Cliente> repoCliente, IRepository<AccesoCliente> repoAccesoC)
-        {
-            this.repoCliente = repoCliente;
-            this.repoAccesoC = repoAccesoC;
-        }
+        public CrudCliente(IRepository<Cliente> repoCliente)
+        { this.repoCliente = repoCliente; }
+        public IEnumerable<Cliente> clientes { get; set; }
 
         public void OnGet()
-        {
-            clientes = repoCliente.GetAll().Result;
-        }
+        { clientes = repoCliente.GetAll().Result; }
 
         [BindProperty]
-        public Cliente NuevoCliente {get;set;} 
+        public Cliente NuevoCliente { get; set; }
         public AccesoCliente NuevoAccesoC = new AccesoCliente();
         [BindProperty]
-        public Cliente ClienteEditar {get;set;}
-        
+        public Cliente ClienteEditar { get; set; }
+
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
+            if (!ModelState.IsValid)
+            { return Page(); }
+
             repoCliente.Insert(NuevoCliente);
-            /*NuevoAccesoC.ClienteCedula = 5100100;
-            NuevoAccesoC.Usuario = "Martha";
-            NuevoAccesoC.Contraseña = "Mar12345";
-            repoAccesoC.Insert(NuevoAccesoC);*/
-            return RedirectToPage("/CrudCliente");
+            return RedirectToPage("./CrudCliente");
         }
 
         public IActionResult OnPostDelete(int id)
         {
             var cliente = repoCliente.GetById(id).Result;
-            if (cliente == null)
-            {
-                return NotFound();
-            }
 
-            cliente.FechaCreacion = DateTime.Now;
+            if (cliente == null)
+            { return NotFound(); }
+
             repoCliente.Delete(cliente);
             return RedirectToPage("/CrudCliente");
         }
@@ -71,15 +58,15 @@ namespace Presentacion.Pages
         {
             Console.WriteLine("Se encontró: " + ClienteEditar.Cedula);
             var cliente = repoCliente.GetBy(c => c.Cedula == ClienteEditar.Cedula).Result;
+
             if (cliente == null)
-            {
-                return NotFound();
-            }
+            { return NotFound(); }
+
             cliente.Nombre = ClienteEditar.Nombre;
             cliente.Apellido = ClienteEditar.Apellido;
             cliente.Cedula = ClienteEditar.Cedula;
             cliente.Telefono = ClienteEditar.Telefono;
-            cliente.Direccion= ClienteEditar.Direccion;
+            cliente.Direccion = ClienteEditar.Direccion;
             cliente.Correo = ClienteEditar.Correo;
             repoCliente.Update(cliente);
 

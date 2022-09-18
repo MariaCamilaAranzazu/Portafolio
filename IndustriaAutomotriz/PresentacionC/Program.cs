@@ -91,13 +91,13 @@ namespace PresentacionC
             accesoC.observaciones = "Cambiar aceite";*/
 
             //Cliente
-            /*accesoC.Nombre = "Edward";
+            accesoC.Nombre = "Edward";
             accesoC.Apellido = "Bonilla";
             accesoC.Cedula = 56123789;
-            accesoC.Telefono = 317715009;
+            accesoC.Telefono = 3177150099;
             accesoC.Direccion = "La patagonia";
             accesoC.Correo = "paraqueoque@paraque.com";
-            accesoC.FechaCreacion = "1//9/2022";*/
+            accesoC.FechaCreacion = DateTime.Now;
 
             //Empleado
             /*accesoC.Nombre = "Edward";
@@ -127,7 +127,7 @@ namespace PresentacionC
             //Console.WriteLine("Se encontró: " + accesoEncontrado.Usuario);
 
             //Encontrar por cualquier otro criterio
-            var accesoEncontrado = repositorioAccesoC.GetBy(c => c.Cedula == 12345678).Result;
+            //var accesoEncontrado = repositorioAccesoC.GetBy(c => c.Cedula == 12345678).Result;
             //Linea para saber que se encontró
             /*Console.WriteLine("Se encontró: " + accesoEncontrado.Nombre);
             Console.WriteLine("Se encontró: " + accesoEncontrado.Apellido);
@@ -178,7 +178,7 @@ namespace PresentacionC
             //INSERTAR REGISTRO 
 
 
-            //repositorioAccesoC.Insert(accesoC);
+            repositorioAccesoC.Insert(accesoC);
 
             //acceso Cliente
             /*Console.WriteLine("Se agregó: " + accesoC.Id);

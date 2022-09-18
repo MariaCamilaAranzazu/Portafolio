@@ -36,13 +36,12 @@ namespace Presentacion.Pages
         public AccesoEmpleado NuevoAccesoE {get;set;} 
         [BindProperty]
         public AccesoEmpleado AccesoEEditar {get;set;}
+
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
-            NuevoAccesoE.FechaCreacion = DateTime.Now;
+            if (!ModelState.IsValid)
+            { return Page(); }
+            
             repoAccesoE.Insert(NuevoAccesoE);
             return RedirectToPage("/CrudAccesosE");
         }

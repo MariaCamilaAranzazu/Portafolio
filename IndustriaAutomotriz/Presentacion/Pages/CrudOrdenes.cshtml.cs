@@ -38,15 +38,10 @@ namespace Presentacion.Pages
         public OrdenServicio OrdenEditar {get;set;}
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
+            if (!ModelState.IsValid)
+            { return Page(); }
+            
             repoOrden.Insert(NuevaOrden);
-            /*NuevoAccesoC.ClienteCedula = 5100100;
-            NuevoAccesoC.Usuario = "Martha";
-            NuevoAccesoC.Contraseña = "Mar12345";
-            repoAccesoC.Insert(NuevoAccesoC);*/
             return RedirectToPage("/CrudOrdenes");
         }
 
@@ -57,8 +52,6 @@ namespace Presentacion.Pages
             {
                 return NotFound();
             }
-
-            orden.FechaCreacion = DateTime.Now;
             repoOrden.Delete(orden);
             return RedirectToPage("/CrudOrdenes");
         }

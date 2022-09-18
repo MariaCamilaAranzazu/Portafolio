@@ -9,12 +9,16 @@ namespace Dominio.Entidades
 {
     public class AccesoEmpleado
     {
-        public int Id {get;set;}
-        [Required,Range(1,2100000000,ErrorMessage="valor de 1 a 2100000000")]
-        public int EmpleadoCedula {get;set;}
-        [Required,StringLength(100)]
-        public string Contraseña {get;set;}
-        [Required]
-        public DateTime FechaCreacion {get;set;}
+        public AccesoEmpleado()
+        { FechaCreacion = DateTime.Now; }
+
+        public int Id { get; set; }
+
+        public int EmpleadoCedula { get; set; }
+
+        [StringLength(50)]
+        public string Contraseña { get; set; }
+
+        public DateTime FechaCreacion { get; set; }
     }
 }

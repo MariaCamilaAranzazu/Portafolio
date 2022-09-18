@@ -1,19 +1,2 @@
 Lista de cambios:
 
--Se crea un una pagina de prueba en el frontend con su respectivo modelo
--La página crea una tabla a partir de consultar la tabla de AccesosClientes y muestra los registros que contiene en la base de datos
--El proyecto cuenta con un repositorio genérico
--La clase AppDBContext tiene un constructor que recibe opciones, por medio de este se inyecta el DbContext en Startup.cs
--Las operaciones sobre la base de datos son funcionales para:
--Agregar un nuevo registro en cualquier tabla
--Obtener una lista con todos los registros de una determinada tabla
--Obtener un registro por Id 
--Obtener un registro buscando por cualquier campo de una determinada tabla
--Editar un registro de cualquier tabla
--Eliminar un registro de cualquier tabla
--El commit se hace eliminando todas las carpetas bin y obj para evitar problemas con las migraciones
--Se está trabajando sobre la migración "PascalAndId" donde se cambió el nombre de todas las variables de las entidades y 
--Se agregaron los campos id a las entidades cliente, empleado y vehiculo
--Se recomienda eliminar la base de datos desde el SQL Server si ya habian aplicado la migración inicial
--En la capa de "PresentacionC" hay un programa llamado "Program.cs" que contiene código comentado
--El código sirve para probar todas las funciones del repositorio sobre la base de datos, hasta acá es completamente funcional

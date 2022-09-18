@@ -23,26 +23,21 @@ namespace Presentacion.Pages
         public IEnumerable<AccesoCliente> accesosC {get;set;}
 
         public CrudAccesoC(IRepository<AccesoCliente> repoAccesoC)
-        {
-            this.repoAccesoC = repoAccesoC;
-        }
+        {this.repoAccesoC = repoAccesoC;}
 
         public void OnGet()
-        {
-            accesosC = repoAccesoC.GetAll().Result;
-        }
+        {accesosC = repoAccesoC.GetAll().Result;}
 
         [BindProperty]
         public AccesoCliente NuevoAccesoC {get;set;} 
         [BindProperty]
         public AccesoCliente AccesoCEditar {get;set;}
+        
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
-            NuevoAccesoC.FechaCreacion = DateTime.Now;
+            if (!ModelState.IsValid)
+            { return Page(); }
+            
             repoAccesoC.Insert(NuevoAccesoC);
             return RedirectToPage("/CrudAccesoC");
         }

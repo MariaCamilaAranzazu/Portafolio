@@ -36,17 +36,13 @@ namespace Presentacion.Pages
         public Revision NuevaRevision {get;set;} 
         [BindProperty]
         public Revision RevisionEditar {get;set;}
+
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
+            if (!ModelState.IsValid)
+            { return Page(); }
+
             repoRevision.Insert(NuevaRevision);
-            /*NuevoAccesoC.ClienteCedula = 5100100;
-            NuevoAccesoC.Usuario = "Martha";
-            NuevoAccesoC.Contraseña = "Mar12345";
-            repoAccesoC.Insert(NuevoAccesoC);*/
             return RedirectToPage("/CrudRevision");
         }
 
@@ -57,8 +53,6 @@ namespace Presentacion.Pages
             {
                 return NotFound();
             }
-
-            revision.FechaCreacion = DateTime.Now;
             repoRevision.Delete(revision);
             return RedirectToPage("/CrudRevision");
         }

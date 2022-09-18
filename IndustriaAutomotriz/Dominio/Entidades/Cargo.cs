@@ -9,10 +9,13 @@ namespace Dominio.Entidades
 {
     public class Cargo
     {
-        public int Id {get;set;}
-        [Required,StringLength(100)]
-        public string Nombre {get;set;}
-        [Required]
-        public DateTime FechaCreacion {get;set;}
+        public Cargo()
+        { FechaCreacion = DateTime.Now; }
+        public int Id { get; set; }
+
+        [StringLength(50)]
+        public string Nombre { get; set; }
+
+        public DateTime FechaCreacion { get; set; }
     }
 }

@@ -38,15 +38,10 @@ namespace Presentacion.Pages
         public Empleado EmpleadoEditar {get;set;}
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
+            if (!ModelState.IsValid)
+            { return Page(); }
+
             repoEmpleado.Insert(NuevoEmpleado);
-            /*NuevoAccesoC.ClienteCedula = 5100100;
-            NuevoAccesoC.Usuario = "Martha";
-            NuevoAccesoC.Contraseña = "Mar12345";
-            repoAccesoC.Insert(NuevoAccesoC);*/
             return RedirectToPage("/CrudEmpleado");
         }
 
@@ -57,8 +52,6 @@ namespace Presentacion.Pages
             {
                 return NotFound();
             }
-
-            empleado.FechaCreacion = DateTime.Now;
             repoEmpleado.Delete(empleado);
             return RedirectToPage("/CrudEmpleado");
         }

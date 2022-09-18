@@ -9,24 +9,32 @@ namespace Dominio.Entidades
 {
     public class Revision
     {
-        public int Id {get;set;}
-        [Required,Range(1,2100000000,ErrorMessage="valor de 1 a 2100000000")]
-        public int ClienteCedula {get;set;}
-        [Required,Range(1,2100000000,ErrorMessage="valor de 1 a 2100000000")]
-        public int EmpleadoCedula {get;set;}
-        [Required,StringLength(100)]
-        public string VehiculoPlaca {get;set;}
-        [Required,StringLength(100)]
-        public string EstAceite {get;set;}
-        [Required,StringLength(100)]
-        public string EstFiltroAire {get;set;}
-        [Required,StringLength(100)]
-        public string EstFiltroGasolina {get;set;}
-        [Required,StringLength(100)]
-        public string TipoMantenimiento {get;set;}
-        [Required]
-        public DateTime FechaCreacion {get;set;}
-        [Required,StringLength(460)]
-        public string Observaciones {get;set;}
+        public Revision()
+        { FechaCreacion = DateTime.Now; }
+        public int Id { get; set; }
+
+        public int ClienteCedula { get; set; }
+
+        public int EmpleadoCedula { get; set; }
+
+        [StringLength(50)]
+        public string VehiculoPlaca { get; set; }
+
+        [StringLength(50)]
+        public string EstAceite { get; set; }
+
+        [StringLength(50)]
+        public string EstFiltroAire { get; set; }
+
+        [StringLength(50)]
+        public string EstFiltroGasolina { get; set; }
+
+        [StringLength(50)]
+        public string TipoMantenimiento { get; set; }
+
+        public DateTime FechaCreacion { get; set; }
+
+        [StringLength(240)]
+        public string Observaciones { get; set; }
     }
 }
