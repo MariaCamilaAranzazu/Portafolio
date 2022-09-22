@@ -1,40 +1,48 @@
 @page
 @model Presentacion.Pages.Account.Login
 
-<div style= "display: flex; flex-direction: column; width: 100%;">
+<div style="display: flex; flex-direction: column; width: 100%;">
     <div class="login-container">
         <form method="post" class="login">
             <div class="text-danger" asp-validation-summary="ModelOnly"></div>
             <div>
                 <div>
-                    <label asp-for="Credential.UserName"></label>
+                    <label style="margin-bottom: 0px;" asp-for="Credential.UserName"></label>
                 </div>
                 <div>
-                    <input type="text" asp-for="Credential.UserName" />
+                    <input style="margin-top: 0px !important;" type="text" asp-for="Credential.UserName" />
                 </div>
                 <span class="text-danger" asp-validation-for="Credential.UserName"></span>
             </div>
             <div>
                 <div>
-                    <label asp-for="Credential.Password"></label>
+                    <label style="margin-bottom: 0px; margin-top: 15px;"asp-for="Credential.Password"></label>
                 </div>
                 <div>
-                    <input type="password" asp-for="Credential.Password" />
+                    <input style="margin-top: 0px !important;" type="password" asp-for="Credential.Password" />
                 </div>
                 <span class="text-danger" asp-validation-for="Credential.Password"></span>
             </div>
             <div>
                 <div>
-                    <input type="submit" value="Login" />
+                    <input style="padding: 3px; border:none; color: aliceblue; margin-top: 20px !important; margin-bottom: 0px; background-color: Royalblue;" type="submit" value="Login" />
                 </div>
+            </div>
+            <div >
+                <a href="/Account/RegistroClientes">
+                    <h3 style="margin-top: 10px; font-size: 15px">Registrarse</h3>
+                </a>
             </div>
         </form>
     </div>
 
-    <div>
-        <a href="/Account/RegistroClientes">
-            <h1>Registrarse</h1>
-        </a>
-    </div>
+
 
 </div>
+
+<style>
+    .Reg {
+
+        text-align: center;
+    }
+</style>
