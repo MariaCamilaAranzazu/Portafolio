@@ -3,23 +3,14 @@
 
 
 <div class="big-container">
-    <span>@Model.aviso</span>
-    <span>@Model.aviso2</span>
-
-    <div>
-        <form method="post">
-
-            <input type="text" placeholder="Criterio de búsqueda" asp-for="cedula">
-            <button type="submit">Buscar</button>
-
-        </form>
-    </div>
-
     <h1>Mis Revisiones</h1>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
+                    <th>
+                        Rev Id
+                    </th>
                     <th>
                         C. Cliente
                     </th>
@@ -53,6 +44,7 @@
                         foreach (var revision in Model.RevisionesEncontradas)
                         {
                             <tr>
+                                <td>@revision.Id</td>
                                 <td>@revision.ClienteCedula</td>
                                 <td>@revision.EmpleadoCedula</td>
                                 <td>@revision.VehiculoPlaca</td>

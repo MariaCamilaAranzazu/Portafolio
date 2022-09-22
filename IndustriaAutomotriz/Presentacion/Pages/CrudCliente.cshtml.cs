@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Dominio.Entidades;
 using Persistencia.AppRepositorios;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentacion.Pages
 {
+    [Authorize]
     public class CrudCliente : PageModel
     {
         //private readonly ILogger<CrudCliente> _logger;

@@ -5,18 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentacion.Pages
 {
+    [Authorize(Policy = "PerteneceATecnico")]
+    
     public class EspacioTrabajo : PageModel
     {
-        private readonly ILogger<EspacioTrabajo> _logger;
-
-        public EspacioTrabajo(ILogger<EspacioTrabajo> logger)
-        {
-            _logger = logger;
-        }
-
         public void OnGet()
         {
         }

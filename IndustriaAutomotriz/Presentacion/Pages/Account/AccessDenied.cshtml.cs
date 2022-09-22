@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace Presentacion.Pages
+namespace Presentacion.Pages.Account
 {
-    public class LoginEmpleados : PageModel
+    public class AccessDenied : PageModel
     {
-        private readonly ILogger<LoginEmpleados> _logger;
+        private readonly ILogger<AccessDenied> _logger;
 
-        public LoginEmpleados(ILogger<LoginEmpleados> logger)
+        public AccessDenied(ILogger<AccessDenied> logger)
         {
             _logger = logger;
         }

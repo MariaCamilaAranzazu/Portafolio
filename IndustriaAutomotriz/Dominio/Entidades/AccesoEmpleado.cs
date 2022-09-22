@@ -17,6 +17,9 @@ namespace Dominio.Entidades
         public int EmpleadoCedula { get; set; }
 
         [StringLength(50)]
+        public string Usuario {get;set;}
+
+        [StringLength(50)]
         public string Contraseña { get; set; }
 
         public DateTime FechaCreacion { get; set; }

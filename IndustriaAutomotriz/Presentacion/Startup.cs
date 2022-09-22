@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Dominio.Entidades;
 using Persistencia.AppRepositorios;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentacion
 {
@@ -27,11 +28,30 @@ namespace Presentacion
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            //string connection = Configuration.GetConnectionString("Server=(localdb)\\MSSQLLocalDB; Database = IndustriaAutomotrizData");
             services.AddDbContext<AppDBContext>(options => options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = IndustriaAutomotrizData"));
-            //services.AddSingleton<IRepository<AccesoCliente>, Repository<AccesoCliente>>(); "Server=(localdb)\\MSSQLLocalDB; Database = IndustriaAutomotrizData"
-            //services.AddSingleton<IRepository<Cliente>, Repository<Cliente>>();
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+            services.AddAuthentication("MyCookieAuth").AddCookie("MyCookieAuth", options =>
+            {
+                options.Cookie.Name = "MyCookieAuth";
+                //options.LoginPath ="/Account/LoginClientes";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+            });
+
+            services.AddAuthorization( options =>{
+
+                options.AddPolicy("PerteneceACliente",
+                policy => policy.RequireClaim("Department", "Cliente"));
+
+                options.AddPolicy("PerteneceATecnico",
+                policy => policy.RequireClaim("Department", "Tecnico"));
+
+                options.AddPolicy("PerteneceAGestor",
+                policy => policy.RequireClaim("Department", "Gestor"));
+
+                options.AddPolicy("PerteneceAdministrador", policy => policy
+                    .RequireClaim("Department", "Administrador"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +73,7 @@ namespace Presentacion
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

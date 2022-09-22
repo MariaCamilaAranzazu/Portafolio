@@ -1,0 +1,40 @@
+@page
+@model Presentacion.Pages.Account.Login
+
+<div style= "display: flex; flex-direction: column; width: 100%;">
+    <div class="login-container">
+        <form method="post" class="login">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div>
+                <div>
+                    <label asp-for="Credential.UserName"></label>
+                </div>
+                <div>
+                    <input type="text" asp-for="Credential.UserName" />
+                </div>
+                <span class="text-danger" asp-validation-for="Credential.UserName"></span>
+            </div>
+            <div>
+                <div>
+                    <label asp-for="Credential.Password"></label>
+                </div>
+                <div>
+                    <input type="password" asp-for="Credential.Password" />
+                </div>
+                <span class="text-danger" asp-validation-for="Credential.Password"></span>
+            </div>
+            <div>
+                <div>
+                    <input type="submit" value="Login" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <a href="/Account/RegistroClientes">
+            <h1>Registrarse</h1>
+        </a>
+    </div>
+
+</div>

@@ -84,9 +84,35 @@ input {
     font-size: 15px;
 }
 
+
 input::placeholder{
     font-size: 14px;
 }
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 50px auto;
+    
+}
+.login{
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.login div{
+    width: 80%;
+}
+
+select {
+    font-size: 14px !important;
+    color: dimgray;
+}
+
 
 hr {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
@@ -119,10 +145,10 @@ table {
     border-bottom-right-radius: 15px;
 }
 
-.shadow form input {
+.shadow form input, select {
     margin: 0px auto;
     width: 32%;
-    background-color: aliceblue;
+    background-color: aliceblue !important;
     border: 1px solid rgba(170, 169, 169, 0.979);
 }
 

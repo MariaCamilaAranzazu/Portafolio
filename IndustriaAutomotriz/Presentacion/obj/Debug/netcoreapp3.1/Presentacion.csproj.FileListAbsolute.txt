@@ -65,7 +65,6 @@ D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.Razo
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.TagHelpers.input.cache
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.TagHelpers.output.cache
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.RazorCoreGenerate.cache
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Contacto.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudAccesoC.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudAccesosE.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\CrudCliente.cshtml.g.cs
@@ -79,15 +78,12 @@ D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Espac
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\EspacioTrabajo.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\GestionAccesos.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\LoginEmpleados.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\MisOrdenes.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\MisRevisiones.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\MisVehiculos.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\QuienesSomos.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Tecnico\VistaTecnico.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.RazorTargetAssemblyInfo.cache
@@ -99,3 +95,8 @@ D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\staticwebassets\P
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.dll
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.pdb
 D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.genruntimeconfig.cache
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Account\AccessDenied.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Account\Logout.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_LoginStatusPartial.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Account\Login.cshtml.g.cs
+D:\C#\IndustriaAutomotriz\Presentacion\obj\Debug\netcoreapp3.1\Razor\Pages\Account\RegistroClientes.cshtml.g.cs

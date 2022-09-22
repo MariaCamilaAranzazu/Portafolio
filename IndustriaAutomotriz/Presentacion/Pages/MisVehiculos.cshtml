@@ -2,13 +2,6 @@
 @model Presentacion.Pages.MisVehiculos
 
 <div class="big-container">
-    <div>
-        <form method="post">
-            <input type="text" placeholder="Ingrese cédula" asp-for="cedula">
-            <button type="submit">Buscar</button>
-
-        </form>
-    </div>
     <h1>Mis Vehículos</h1>
     <div class="table-responsive">
         <table>
@@ -50,7 +43,6 @@
                             </tr>
                         }
                     }
-
                 }
             </tbody>
         </table>

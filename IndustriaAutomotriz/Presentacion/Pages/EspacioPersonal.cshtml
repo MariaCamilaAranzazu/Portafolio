@@ -18,28 +18,28 @@
                 </div>
                 <div class="info">
                     <div class="info-set">
-                        <span>Nombres</span>
-                        <span>********</span>
+                        <span style="font-weight:bold">Nombre:      </span>
+                        <span>@Model.datosEncontrados.Nombre</span>
                     </div>
                     <div class="info-set">
-                        <span>Apellidos</span>
-                        <span>********</span>
+                        <span style="font-weight:bold">Apellido:    </span>
+                        <span>@Model.datosEncontrados.Apellido</span>
                     </div>
                     <div class="info-set">
-                        <span>Cedula</span>
-                        <span>********</span>
+                        <span style="font-weight:bold">Cedula:      </span>
+                        <span>@Model.datosEncontrados.Cedula</span>
                     </div>
                     <div class="info-set">
-                        <span>Telefono</span>
-                        <span>********</span>
+                        <span style="font-weight:bold">Telefono:    </span>
+                        <span>@Model.datosEncontrados.Telefono</span>
                     </div>
                     <div class="info-set">
-                        <span>Direccion</span>
-                        <span>********</span>
+                        <span style="font-weight:bold">Direccion:   </span>
+                        <span>@Model.datosEncontrados.Direccion</span>
                     </div>
                     <div class="info-set">
-                        <span>Correo</span>
-                        <span>********</span>
+                        <span style="font-weight:bold">Correo:      </span>
+                        <span>@Model.datosEncontrados.Correo</span>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
 
     .info-set{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
     }
 
     .info-set span{

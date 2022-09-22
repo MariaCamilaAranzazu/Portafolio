@@ -7,78 +7,44 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Dominio.Entidades;
 using Persistencia.AppRepositorios;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentacion.Pages
 {
+    [Authorize]
     public class MisRevisiones : PageModel
     {
-        /*private readonly ILogger<MisRevisiones> _logger;
-
-        public MisRevisiones(ILogger<MisRevisiones> logger)
-        {
-            _logger = logger;
-        }*/
-
-        [BindProperty]
-        public int cedula {get; set;}
-        public string aviso {get;set;}
-        public string aviso2 {get;set;}
-
+        private readonly IRepository<AccesoCliente> repoAcessoC;
         private readonly IRepository<Revision> repoRevision;
+        private readonly IRepository<Cliente> repoCliente;
 
         public IEnumerable<Revision> RevisionesEncontradas { get; set; }
 
-        public MisRevisiones(IRepository<Revision> repoRevision)
+        public MisRevisiones(IRepository<Revision> repoRevision, IRepository<Cliente> repoCliente, IRepository<AccesoCliente> repoAcessoC)
         {
             this.repoRevision = repoRevision;
-
+            this.repoCliente = repoCliente;
+            this.repoAcessoC = repoAcessoC;
         }
 
         public void OnGet()
         {
+            var accesoC = repoAcessoC.GetBy(ac => ac.Usuario == User.Identity.Name).Result;
+            var cliente = repoCliente.GetBy(c => c.Cedula == accesoC.ClienteCedula).Result;
 
-            aviso = "Hola Mundo";
-
-
-            /*if (ClienteEncontrado != null)
+            if (cliente != null)
             {
-                Console.WriteLine("Se encontró: " + ClienteEncontrado.Nombre);
-                Console.WriteLine("Se encontró: " + ClienteEncontrado.Cedula);
-                Console.WriteLine("Se encontró: " + ClienteEncontrado.Correo);
-
-            }*/
-        }
-
-        public IActionResult OnPost()
-        {
-            if (ModelState.IsValid == false)
-            {
-                return Page();
-            }
-
-            var revisionesGen = repoRevision.GetAll().Result;
-            List<Revision> revisionesC = new List<Revision>();
-            
-
-            foreach (var revision in revisionesGen)
-            {
-                if (revision.EmpleadoCedula == cedula)
+                var revisionesGen = repoRevision.GetAll().Result;
+                List<Revision> revisionesC = new List<Revision>();
+                foreach (var revision in revisionesGen)
                 {
-                    revisionesC.Add(revision);
+                    if (revision.ClienteCedula == cliente.Cedula)
+                    {
+                        revisionesC.Add(revision);
+                    }
                 }
-                
+                RevisionesEncontradas = revisionesC;
             }
-
-            RevisionesEncontradas = revisionesC;
-
-            /*Console.WriteLine("Se encontró: " + cliente.Nombre);
-            Console.WriteLine("Se encontró: " + cliente.Cedula);
-            Console.WriteLine("Se encontró: " + cliente.Correo);*/
-            aviso2= "hola desde post";
-            return Page();
         }
-
-
-
     }
 }
