@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Dominio.Entidades;
 using Persistencia.AppRepositorios;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentacion.Pages
 {
+    [Authorize]
     public class CrudVehiculo : PageModel
     {
         /*private readonly ILogger<CrudVehiculo> _logger;
@@ -36,17 +38,13 @@ namespace Presentacion.Pages
         public Vehiculo NuevoVehiculo {get;set;} 
         [BindProperty]
         public Vehiculo VehiculoEditar {get;set;}
+
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
+            if (!ModelState.IsValid)
+            { return Page(); }
+            
             repoVehiculo.Insert(NuevoVehiculo);
-            /*NuevoAccesoC.ClienteCedula = 5100100;
-            NuevoAccesoC.Usuario = "Martha";
-            NuevoAccesoC.Contraseña = "Mar12345";
-            repoAccesoC.Insert(NuevoAccesoC);*/
             return RedirectToPage("/CrudVehiculo");
         }
 
@@ -57,7 +55,6 @@ namespace Presentacion.Pages
             {
                 return NotFound();
             }
-
             repoVehiculo.Delete(vehiculo);
             return RedirectToPage("/CrudVehiculo");
         }

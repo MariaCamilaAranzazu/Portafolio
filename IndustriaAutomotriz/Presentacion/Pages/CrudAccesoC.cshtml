@@ -19,6 +19,9 @@
                     <th>
                         Contraseña
                     </th>
+                    <th>
+                        Acciones
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -40,21 +43,21 @@
         </table>
     </div>
     <hr>
-    <div class="container-fluid">
-        <div class="mini-containerA">
+    <div class="container-fluid centerTablas">
+        <div class="mini-containerA width-ajustado">
             <div>
                 <h1>Registrar Acceso</h1>
             </div>
             <div class="shadow">
                 <form method="post">
-                    <input type="text" asp-for=" NuevoAccesoC.ClienteCedula" placeholder="C. Cliente" required />
-                    <input type="text" asp-for=" NuevoAccesoC.Usuario" placeholder="Usuario" required />
-                    <input type="text" asp-for=" NuevoAccesoC.Contraseña" placeholder="Contraseña" required />
+                    <input type="text" asp-for=" NuevoAccesoC.ClienteCedula" placeholder="C. Cliente" required/>
+                    <input type="text" asp-for=" NuevoAccesoC.Usuario" placeholder="Usuario" required/>
+                    <input type="text" asp-for=" NuevoAccesoC.Contraseña" placeholder="Contraseña" required/>
                     <button type="submit" class="no-light-buttons">Guardar</button>
                 </form>
             </div>
         </div>
-        <div class="mini-containerB">
+        <div class="mini-containerB width-ajustado">
             <div>
                 <h1>Actualizar Acceso</h1>
             </div>

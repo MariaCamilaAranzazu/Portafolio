@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Dominio.Entidades;
 using Persistencia.AppRepositorios;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentacion.Pages
 {
+    [Authorize]
     public class CrudOrdenes : PageModel
     {
         /*private readonly ILogger<CrudOrdenes> _logger;
@@ -38,15 +40,10 @@ namespace Presentacion.Pages
         public OrdenServicio OrdenEditar {get;set;}
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
+            if (!ModelState.IsValid)
+            { return Page(); }
+            
             repoOrden.Insert(NuevaOrden);
-            /*NuevoAccesoC.ClienteCedula = 5100100;
-            NuevoAccesoC.Usuario = "Martha";
-            NuevoAccesoC.Contraseña = "Mar12345";
-            repoAccesoC.Insert(NuevoAccesoC);*/
             return RedirectToPage("/CrudOrdenes");
         }
 
@@ -57,7 +54,6 @@ namespace Presentacion.Pages
             {
                 return NotFound();
             }
-
             repoOrden.Delete(orden);
             return RedirectToPage("/CrudOrdenes");
         }

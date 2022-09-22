@@ -10,8 +10,8 @@
             <h1 class="administrador">Mi Espacio de Trabajo</h1>
         </div>
     </div>
-    <div class="container-fluid alineamiento">
-        <div class="mini-containerA size">
+    <div class="container-fluid center">
+        <div class="txtAlign">
             <div>
                 <h1>Clientes</h1>
             </div>
@@ -23,7 +23,7 @@
                 </div>
             </div>
         </div>
-        <div class="mini-containerB size">
+        <div class="txtAlign">
             <div>
                 <h1>Vehiculos</h1>
             </div>
@@ -33,7 +33,7 @@
                 </a>
             </div>
         </div>
-        <div class="mini-containerB size">
+        <div class="txtAlign">
             <div>
                 <h1>Revisiones</h1>
             </div>
@@ -43,7 +43,7 @@
                 </a>
             </div>
         </div>
-        <div class="mini-containerB size">
+        <div class="xtAlign">
             <div>
                 <h1>Ordenes</h1>
             </div>
@@ -90,18 +90,26 @@
         flex-direction: row;
     }
 
+    .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
     .alineamiento {
         margin-top: 190px;
     }
 
-    .size {
-        width: 20%;
+    .txtAlign {
         text-align: center;
     }
 
     .container-fluid {
-        justify-content: space-around;
-        width: 95%;
+        justify-content: space-evenly;
+        width: 70%;
         flex-wrap: wrap;
     }
 

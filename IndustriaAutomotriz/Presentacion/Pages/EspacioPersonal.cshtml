@@ -1,0 +1,171 @@
+@page
+@model Presentacion.Pages.EspacioPersonal
+
+<div class="organizador">
+    <div class="encabezado">
+        <div>
+            <i class="bi bi-bookmark-star" style="font-size: 50px; line-height:0px; color:aliceblue; margin-left:15px;"></i>
+        </div>
+        <div>
+            <h1 class="administrador">Mi Espacio Personal</h1>
+        </div>
+    </div>
+    <div class="container-fluid" style="margin-top:30px;">
+        <div class="txtAlign">
+            <div style="display: flex; flex-direction:Row;">
+                <div class="">
+                    <i class="bi bi-file-earmark-person-fill" style="font-size:140px; line-height:0px; color:#b5b073"></i>
+                </div>
+                <div class="info">
+                    <div class="info-set">
+                        <span style="font-weight:bold">Nombre:      </span>
+                        <span>@Model.datosEncontrados.Nombre</span>
+                    </div>
+                    <div class="info-set">
+                        <span style="font-weight:bold">Apellido:    </span>
+                        <span>@Model.datosEncontrados.Apellido</span>
+                    </div>
+                    <div class="info-set">
+                        <span style="font-weight:bold">Cedula:      </span>
+                        <span>@Model.datosEncontrados.Cedula</span>
+                    </div>
+                    <div class="info-set">
+                        <span style="font-weight:bold">Telefono:    </span>
+                        <span>@Model.datosEncontrados.Telefono</span>
+                    </div>
+                    <div class="info-set">
+                        <span style="font-weight:bold">Direccion:   </span>
+                        <span>@Model.datosEncontrados.Direccion</span>
+                    </div>
+                    <div class="info-set">
+                        <span style="font-weight:bold">Correo:      </span>
+                        <span>@Model.datosEncontrados.Correo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid center">
+        <div class="txtAlign">
+            <div>
+                <h1>Vehiculos</h1>
+            </div>
+            <div class="">
+                <a href="/MisVehiculos">
+                    <i class="bi bi-car-front iconos" style="font-size:128px; line-height:0px; color:#b5b073"></i>
+                </a>
+            </div>
+        </div>
+        <div class="txtAlign">
+            <div>
+                <h1>Mis Revisiones</h1>
+            </div>
+            <div class="">
+                <a href="/MisRevisiones">
+                    <i class="bi bi-journal-check iconos" style="font-size:128px; line-height:0px; color:#b5b073"></i>
+                </a>
+            </div>
+        </div>
+        <div class="xtAlign">
+            <div>
+                <h1>Mis Órdenes</h1>
+            </div>
+            <div class="">
+                <a href="/MisOrdenes">
+                    <i class="bi bi-tools iconos" style="font-size:120px; line-height:0px; color:#b5b073"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+
+    .info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    }
+
+    .info-set{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .info-set span{
+        margin-right: 5px;
+    }
+    
+    h1 {
+        font-size: 27px;
+        color: royalblue;
+        background-color: aliceblue;
+        font-weight: 600;
+    }
+
+    .administrador{
+        color: aliceblue;
+        background-color: royalblue;
+        margin-left: 20px;
+    }
+
+
+    .organizador {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .encabezado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: royalblue;
+        color: white;
+        padding: 15px 0px;
+    }
+
+    .organizador-td {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .center {
+        margin: 0;
+        position: relative;
+        top: 30%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .alineamiento {
+        margin-top: 190px;
+    }
+
+    .txtAlign {
+        text-align: center;
+    }
+
+    .container-fluid {
+        justify-content: space-around;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    svg {
+        object-fit: cover;
+    }
+
+    .iconos{
+    }
+
+    .iconos:hover{
+        color:MediumVioletRed !important;
+    }
+</style>
+
+<style type="text/css" media="screen (max-width:390px)">
+    i{
+        font-size: 50px;
+    }
+</style>

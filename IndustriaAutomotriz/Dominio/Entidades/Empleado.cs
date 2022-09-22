@@ -9,14 +9,28 @@ namespace Dominio.Entidades
 {
     public class Empleado
     {
-        public int Id {get;set;}
-        public string Nombre {get;set;}
-        public string Apellido {get;set;}
-        public int Cedula {get;set;}
-        public int CargoId {get;set;}
-        public int Telefono {get;set;}
-        public string Direccion {get;set;}
-        public string Correo {get;set;}
-        public string FechaCreacion {get;set;}
+        public Empleado()
+        { FechaCreacion = DateTime.Now; }
+        public int Id { get; set; }
+
+        [StringLength(50)]
+        public string Nombre { get; set; }
+
+        [StringLength(50)]
+        public string Apellido { get; set; }
+
+        public int Cedula { get; set; }
+
+        public int CargoId { get; set; }
+
+        public long Telefono { get; set; }
+
+        [StringLength(50)]
+        public string Direccion { get; set; }
+
+        [StringLength(50)]
+        public string Correo { get; set; }
+
+        public DateTime FechaCreacion { get; set; }
     }
 }

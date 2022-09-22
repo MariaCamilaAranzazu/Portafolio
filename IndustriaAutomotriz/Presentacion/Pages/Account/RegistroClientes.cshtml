@@ -1,0 +1,41 @@
+@page
+@model Presentacion.Pages.Account.RegistroClientes
+
+<div>
+    <form method="post">
+        <input type="text" asp-for="cedula" placeholder="Ingresar Cédula" required />
+        <button type="submit" class="no-light-buttons">Buscar</button>
+    </form>
+</div>
+
+@{
+    if (Model.clienteNulo == true)
+    {
+        <div>
+            <form method="post" class="overflow">
+                <input type="text" asp-for="NuevoCliente.Cedula" placeholder="Cedula" required />
+                <input type="text" asp-for="NuevoAccesoC.Usuario" placeholder="Usuario" required />
+                <input type="text" asp-for="NuevoAccesoC.Contraseña" placeholder="Contraseña" required />
+                <button type="submit" class="no-light-buttons" asp-page-handler="Reg">Guardar</button>
+            </form>
+        </div>
+    }
+
+    else if(Model.clienteExiste == false)
+    {
+        <div>
+            <form method="post" class="overflow">
+                <input type="text" asp-for="NuevoAccesoC.Usuario" placeholder="Usuario" required />
+                <input type="text" asp-for="NuevoAccesoC.Contraseña" placeholder="Contraseña" required />
+                <input type="text" asp-for="NuevoCliente.Nombre" placeholder="Nombres" required />
+                <input type="text" asp-for="NuevoCliente.Apellido" placeholder="Apellidos" required />
+                <input type="text" asp-for="NuevoCliente.Cedula" placeholder="Cedula" required />
+                <input type="text" asp-for="NuevoCliente.Telefono" placeholder="Telefono" required />
+                <input type="text" asp-for="NuevoCliente.Direccion" placeholder="Dirección" required />
+                <input type="email" asp-for="NuevoCliente.Correo" placeholder="Correo" required />
+                <button type="submit" class="no-light-buttons" asp-page-handler="Reg">Guardar</button>
+            </form>
+        </div>
+
+    }
+}

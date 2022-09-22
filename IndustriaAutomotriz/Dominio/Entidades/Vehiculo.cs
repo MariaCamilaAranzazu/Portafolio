@@ -9,13 +9,27 @@ namespace Dominio.Entidades
 {
     public class Vehiculo
     {
-        public int Id {get;set;}
-        public string Tipo {get;set;}
-        public string Placa {get;set;}
-        public int CliCedula {get;set;}
-        public string Marca {get;set;}
-        public string Modelo {get;set;}
-        public string Color {get;set;}
-        public string FechaCreacion {get;set;}
+        public Vehiculo()
+        { FechaCreacion = DateTime.Now; }
+        public int Id { get; set; }
+
+        [StringLength(50)]
+        public string Tipo { get; set; }
+
+        [StringLength(50)]
+        public string Placa { get; set; }
+
+        public int CliCedula { get; set; }
+
+        [StringLength(50)]
+        public string Marca { get; set; }
+
+        [StringLength(50)]
+        public string Modelo { get; set; }
+
+        [StringLength(50)]
+        public string Color { get; set; }
+
+        public DateTime FechaCreacion { get; set; }
     }
 }

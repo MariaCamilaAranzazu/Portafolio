@@ -11,28 +11,31 @@
                         Id
                     </th>
                     <th>
-                        C. Cliente
+                        #Cliente
                     </th>
                     <th>
-                        C. Empleado
+                        #Empleado
                     </th>
                     <th>
-                        Placa
+                        #Placa
                     </th>
                     <th>
                         Aceite
                     </th>
                     <th>
-                        Filtro Aire
+                        F. Aire
                     </th>
                     <th>
-                        Filtro Gasolina
+                        F. Gasolina
                     </th>
                     <th>
-                        Mantenimiento
+                        Mant.
                     </th>
                     <th>
                         Observaciones
+                    </th>
+                    <th>
+                        Acciones
                     </th>
                 </tr>
             </thead>
@@ -67,16 +70,38 @@
             </div>
             <div class="shadow">
                 <form method="post">
-                    <input type="text" asp-for="NuevaRevision.ClienteCedula" placeholder="C. Cliente" required />
-                    <input type="text" asp-for="NuevaRevision.EmpleadoCedula" placeholder="C. Empleado" required />
-                    <input type="text" asp-for="NuevaRevision.VehiculoPlaca" placeholder="Placa" required />
-                    <input type="text" asp-for="NuevaRevision.EstAceite" placeholder="Aceite" required />
-                    <input type="text" asp-for="NuevaRevision.EstFiltroAire" placeholder="Filtro Aire" required />
-                    <input type="text" asp-for="NuevaRevision.EstFiltroGasolina" placeholder="Filtro Gasolina"
-                        required />
-                    <input type="text" asp-for="NuevaRevision.TipoMantenimiento" placeholder="Mantenimiento" required />
-                    <input type="text" asp-for="NuevaRevision.Observaciones" placeholder="Observaciones" required />
-                    <button type="submit" class="no-light-buttons">Guardar</button>
+                    <input type="text" asp-for="NuevaRevision.ClienteCedula" placeholder="#Cliente" required/>
+                    <input type="text" asp-for="NuevaRevision.EmpleadoCedula" placeholder="#Empleado" required/>
+                    <input type="text" asp-for="NuevaRevision.VehiculoPlaca" placeholder="#Placa" required/>
+                    <!--<input type="text" asp-for="NuevaRevision.EstAceite" placeholder="Aceite" required/>-->
+                    <select name="NuevaRevision.EstAceite"  required>
+                        <option value="" selected>Aceite</option>
+                        <option value="Cambio Inmediato">Cambio Inmediato</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Bien">Bien</option>
+                    </select>
+                    <!--<input type="text" asp-for="NuevaRevision.EstFiltroAire" placeholder="F. Aire" required/>-->
+                    <select name="NuevaRevision.EstFiltroAire" required>
+                        <option value="" selected>F.Aire</option>
+                        <option value="Cambio Inmediato">Cambio Inmediato</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Bien">Bien</option>
+                    </select>
+                    <!--<input type="text" asp-for="NuevaRevision.EstFiltroGasolina" placeholder="F. Gasolina" required/>-->
+                    <select name="NuevaRevision.EstFiltroGasolina" required>
+                        <option value="" selected>F. Gasolina</option>
+                        <option value="Cambio Inmediato">Cambio Inmediato</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Bien">Bien</option>
+                    </select>
+                    <!--<input type="text" asp-for="NuevaRevision.TipoMantenimiento" placeholder="Mant." required/>-->
+                    <select name="NuevaRevision.TipoMantenimiento"  required>
+                        <option value="" selected>Mant..</option>
+                        <option value="Preventivo">Preventivo</option>
+                        <option value="Correctivo">Correctivo</option>
+                    </select>
+                    <input type="text" asp-for="NuevaRevision.Observaciones" placeholder="Observaciones" required/>
+                    <button type="submit" class="no-light-buttons al-right">Guardar</button>
                 </form>
             </div>
         </div>
@@ -84,20 +109,40 @@
             <div>
                 <h1>Actualizar Revisión</h1>
             </div>
-
             <div class="shadow">
                 <form method="post">
-                    <input type="text" asp-for="RevisionEditar.Id" placeholder="Buscar por Id" required />
-                    <input type="text" asp-for="RevisionEditar.ClienteCedula" placeholder="C.Cliente" required />
-                    <input type="text" asp-for="RevisionEditar.EmpleadoCedula" placeholder="C. Empleado" required />
-                    <input type="text" asp-for="RevisionEditar.VehiculoPlaca" placeholder="Placa" required />
-                    <input type="text" asp-for="RevisionEditar.EstAceite" placeholder="Aceite" required />
-                    <input type="text" asp-for="RevisionEditar.EstFiltroAire" placeholder="Filtro Aire" required />
-                    <input type="text" asp-for="RevisionEditar.EstFiltroGasolina" placeholder="Filtro Gasolina"
-                        required />
-                    <input type="text" asp-for="RevisionEditar.TipoMantenimiento" placeholder="Mantenimiento"
-                        required />
-                    <input type="text" asp-for="RevisionEditar.Observaciones" placeholder="Observaciones" required />
+                    <input type="text" asp-for="RevisionEditar.Id" placeholder="Buscar por Id" required/>
+                    <input type="text" asp-for="RevisionEditar.ClienteCedula" placeholder="#Cliente" required/>
+                    <input type="text" asp-for="RevisionEditar.EmpleadoCedula" placeholder="#Placa" required/>
+                    <input type="text" asp-for="RevisionEditar.VehiculoPlaca" placeholder="Placa" required/>
+                   <!-- <input type="text" asp-for="RevisionEditar.EstAceite" placeholder="Aceite" required/>-->
+                     <select name="RevisionEditar.EstAceite" required>
+                        <option value="" selected>Aceite</option>
+                        <option value="Cambio Inmediato">Cambio Inmediato</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Bien">Bien</option>
+                    </select>
+                    <!--<input type="text" asp-for="RevisionEditar.EstFiltroAire" placeholder="F. Aire" required/>-->
+                    <select name="RevisionEditar.EstFiltroAire"  required>
+                        <option value="" selected>F.Aire</option>
+                        <option value="Cambio Inmediato">Cambio Inmediato</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Bien">Bien</option>
+                    </select>
+                    <!--<input type="text" asp-for="RevisionEditar.EstFiltroGasolina" placeholder="F. Gasolina" required />-->
+                    <select name="RevisionEditar.EstFiltroGasolina" required>
+                        <option value="" selected>F. Gasolina</option>
+                        <option value="Cambio Inmediato">Cambio Inmediato</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Bien">Bien</option>
+                    </select>
+                    <!--<input type="text" asp-for="RevisionEditar.TipoMantenimiento" placeholder="Mant." required />-->
+                    <select name="RevisionEditar.TipoMantenimiento" required>
+                        <option value="" selected>Mant..</option>
+                        <option value="Preventivo">Preventivo</option>
+                        <option value="Correctivo">Correctivo</option>
+                    </select>
+                    <input type="text" asp-for="RevisionEditar.Observaciones" placeholder="Observaciones" required/>
                     <button type="submit" asp-page-handler="Edit" class="no-light-buttons">Editar</button>
                 </form>
 

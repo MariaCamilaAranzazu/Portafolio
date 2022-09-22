@@ -15,7 +15,7 @@ using Dominio.Entidades;
 
 namespace Persistencia.AppRepositorios
 {
-    public class Repository<T> : IRepository<T> where T : class//, IEntity
+    public class Repository<T> : IRepository<T> where T : class
     {
         public AppDBContext _context;
         public DbSet<T> table;
@@ -37,11 +37,9 @@ namespace Persistencia.AppRepositorios
 
         public async Task<T> Insert(T entity)
         {
-            Console.WriteLine("Guardando");
+            Console.WriteLine("Guardando...");
             await table.AddAsync(entity);
-            Console.WriteLine("Parece que... :D");
             Save();
-
             Console.WriteLine("Se guardó correctamente!");
             return entity;
         }
@@ -76,9 +74,7 @@ namespace Persistencia.AppRepositorios
 
         public void Save()
         {
-            Console.WriteLine("Entra en el método guardar, pero parece que no sale, o si?");
             _context.SaveChanges();
-            Console.WriteLine("Ya saliooooo!");
         }
 
         private bool disposed = false;

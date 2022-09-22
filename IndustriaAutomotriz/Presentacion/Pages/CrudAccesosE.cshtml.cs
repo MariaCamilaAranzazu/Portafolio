@@ -7,41 +7,32 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Dominio.Entidades;
 using Persistencia.AppRepositorios;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentacion.Pages
 {
+    [Authorize]
     public class CrudAccesosE : PageModel
     {
-        /*private readonly ILogger<CrudAccesosE> _logger;
-
-        public CrudAccesosE(ILogger<CrudAccesosE> logger)
-        {
-            _logger = logger;
-        }*/
-
         private readonly IRepository<AccesoEmpleado> repoAccesoE;
         public IEnumerable<AccesoEmpleado> accesosE {get;set;}
 
         public CrudAccesosE(IRepository<AccesoEmpleado> repoAccesoE)
-        {
-            this.repoAccesoE = repoAccesoE;
-        }
+        {this.repoAccesoE = repoAccesoE;}
 
         public void OnGet()
-        {
-            accesosE = repoAccesoE.GetAll().Result;
-        }
+        {accesosE = repoAccesoE.GetAll().Result;}
 
         [BindProperty]
         public AccesoEmpleado NuevoAccesoE {get;set;} 
         [BindProperty]
         public AccesoEmpleado AccesoEEditar {get;set;}
+
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
+            if (!ModelState.IsValid)
+            { return Page(); }
+            
             repoAccesoE.Insert(NuevoAccesoE);
             return RedirectToPage("/CrudAccesosE");
         }
@@ -50,9 +41,7 @@ namespace Presentacion.Pages
         {
             var accesoE = repoAccesoE.GetById(id).Result;
             if (accesoE == null)
-            {
-                return NotFound();
-            }
+            {return NotFound();}
 
             repoAccesoE.Delete(accesoE);
             return RedirectToPage("/CrudAccesosE");
@@ -63,10 +52,9 @@ namespace Presentacion.Pages
             Console.WriteLine("Se encontró: " + AccesoEEditar.EmpleadoCedula);
             var accesoE = repoAccesoE.GetBy(ae => ae.EmpleadoCedula == AccesoEEditar.EmpleadoCedula).Result;
             if (accesoE == null)
-            {
-                return NotFound();
-            }
+            {return NotFound();            }
             accesoE.EmpleadoCedula = AccesoEEditar.EmpleadoCedula;
+            accesoE.Contraseña = AccesoEEditar.Usuario;
             accesoE.Contraseña = AccesoEEditar.Contraseña;
             repoAccesoE.Update(accesoE);
 

@@ -1,11 +1,7 @@
 Lista de cambios:
 
--Repositorio Genérico funcional
--Migraciones funcionales
--DbContext funcional
--Capa de presentación configurada
--Vistas parcialmente terminadas (falta espacio personal (cliente))
--Conexión backend-frontend exitosa
--Unificacion de estilos
--Adecuación parcial de navbar
--Formularios web CRUD terminados
+-Login terminado
+-Registro de clientes terminado
+-Validaciones terminadas
+-Migración: Añadido usuario a tabla empleados
+Version lista para ser usada

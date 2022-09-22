@@ -2,14 +2,26 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Dominio.Entidades
 {
     public class AccesoEmpleado
     {
-        public int Id {get;set;}
-        public int EmpleadoCedula {get;set;}
-        public string Contraseña {get;set;}
-        public string FechaCreacion {get;set;}
+        public AccesoEmpleado()
+        { FechaCreacion = DateTime.Now; }
+
+        public int Id { get; set; }
+
+        public int EmpleadoCedula { get; set; }
+
+        [StringLength(50)]
+        public string Usuario {get;set;}
+
+        [StringLength(50)]
+        public string Contraseña { get; set; }
+
+        public DateTime FechaCreacion { get; set; }
     }
 }

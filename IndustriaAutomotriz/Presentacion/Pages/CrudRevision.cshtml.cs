@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Dominio.Entidades;
 using Persistencia.AppRepositorios;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Presentacion.Pages
 {
+    [Authorize]
     public class CrudRevision : PageModel
     {
         /*private readonly ILogger<CrudRevision> _logger;
@@ -36,17 +38,13 @@ namespace Presentacion.Pages
         public Revision NuevaRevision {get;set;} 
         [BindProperty]
         public Revision RevisionEditar {get;set;}
+
         public IActionResult OnPost()
         {
-            if (ModelState.IsValid==false)
-            {
-                return Page();
-            }
+            if (!ModelState.IsValid)
+            { return Page(); }
+
             repoRevision.Insert(NuevaRevision);
-            /*NuevoAccesoC.ClienteCedula = 5100100;
-            NuevoAccesoC.Usuario = "Martha";
-            NuevoAccesoC.Contraseña = "Mar12345";
-            repoAccesoC.Insert(NuevoAccesoC);*/
             return RedirectToPage("/CrudRevision");
         }
 
@@ -57,7 +55,6 @@ namespace Presentacion.Pages
             {
                 return NotFound();
             }
-
             repoRevision.Delete(revision);
             return RedirectToPage("/CrudRevision");
         }

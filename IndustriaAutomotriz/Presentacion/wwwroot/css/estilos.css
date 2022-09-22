@@ -2,19 +2,18 @@
     font-family: 'Roboto', sans-serif;
 }
 
-/*body{
-    background-image: url("https://static.vecteezy.com/system/resources/previews/006/263/900/non_2x/white-and-blue-tone-abstract-background-backdrop-for-presentation-design-for-website-concept-of-beauty-and-health-business-brochure-free-photo.jpg");
-}*/
-
 .big-container {
-    width: 70%;
+    width: 71%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
 }
 
 h1 {
     padding: 5px;
     background-color: royalblue;
     color: white;
-    font-size: 23px;
+    font-size: 27px;
     text-align: center;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -24,54 +23,110 @@ h1 {
     border-bottom-right-radius: 0px;
 }
 
-
+h2{
+    font-size: 23px;
+    text-align: center;
+    font-weight: bold;
+}
 
 .light-buttons {
-    font-size: 16px;
-    padding: 2px 10px;
-    background-color: DarkKhaki;
+    padding-top: 2px;
+    padding-bottom: 1.5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #b5b073;
     color: white;
     border: none;
     border-radius: 5px;
-    box-shadow: 0px 1px 10px DarkKhaki;
-    margin: 7px 10px;
+    box-shadow: 0px 1px 10px #b5b073;
+    margin-bottom: 6px;
+    margin-left: 5px;
 }
 
 .no-light-buttons {
     padding-top: 2px;
-    background-color: DarkKhaki;
+    background-color: #b5b073;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
 .light-buttons:hover {
-    background-color: Navy;
+    background-color: MediumVioletRed;
     color: white;
 }
 
 .no-light-buttons:hover {
-    background-color: Navy;
+    background-color: MediumVioletRed;
     color: white;
 }
 
 th {
     color: navy;
-    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
     text-align: center;
+    font-size: 17px;
 }
 
 td {
     text-align: center;
+    font-size: 15px;
 }
+
+input {
+    display: initial;
+    flex-direction: row;
+    width: 32%;
+    /*margin: 0px auto !important;*/
+    font-size: 15px;
+}
+
+
+input::placeholder{
+    font-size: 14px;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: 50px auto;
+    
+}
+.login{
+    width: 60%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.login div{
+    width: 80%;
+}
+
+select {
+    font-size: 14px !important;
+    color: dimgray;
+}
+
 
 hr {
     border-top: 1px solid rgba(0, 0, 0, 0.4);
     margin: 15px 0px;
+    position: relative;
+    top: 0.8%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .al-right {
-    text-align: right;
+    /*display: flex;*/
+    /*text-align: right;*/
 }
 
 table {
@@ -83,17 +138,17 @@ table {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 5px;
-    box-shadow: 0px 1px 10px DodgerBlue !important;
+    box-shadow: 0px 1px 10px royalblue !important;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
-.shadow form input {
+.shadow form input, select {
     margin: 0px auto;
     width: 32%;
-    background-color: aliceblue;
+    background-color: aliceblue !important;
     border: 1px solid rgba(170, 169, 169, 0.979);
 }
 
@@ -106,15 +161,16 @@ table {
 }
 
 tbody {
-    padding: 15px 30px;
+    /*padding: 15px 30px;*/
 }
 
-.overflow{
+.overflow {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
+
 .col1 {
     margin-right: 20px;
     background: white;
@@ -134,26 +190,51 @@ tbody {
 }
 
 .container-fluid {
-    padding: 0px 0px;
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.container-fluid2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-bottom: 20px;
 }
 
 .mini-containerA {
-    width: 48%;
-    margin-right: 40px;
+    margin-right: 20px;
+
 }
 
 .mini-containerB {
-    width: 48%;
+    margin-left: 20px;
+
+}
+
+.width-ajustado {
+    width: 49%;
+}
+
+.centerTablasPequeñas {
+    margin: 0;
+    position: relative;
+    top: 15%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .table-responsive {
     min-height: .01%;
     overflow-x: auto;
-    box-shadow: 0px 1px 10px DodgerBlue;
+    box-shadow: 0px 1px 10px royalblue;
     border-radius: 15px;
     width: 100%;
     border-top-left-radius: 0px;
@@ -163,41 +244,50 @@ tbody {
 }
 
 
-@media screen and (max-width: 1260px){
+
+/*@media screen and (max-width: 1260px){
     input{
         display: block !important;
         width: 90% !important;
         margin: 0px auto !important;
     }
-}
+}*/
 
-@media screen and (max-width: 767px){
-    .table-responsive {
-        width: 100%;
-        margin-bottom: 15px;
-        overflow-y: hidden;
-        border: 1px solid #ddd;
+@media screen and (max-width: 1360px){
+    th {
+        font-size: 14px;
     }
-
-    .table-responsive>.table {
-        margin-bottom: 0;
+    
+    td {
+        font-size: 12px;
     }
-
-    .table-responsive>.table>thead>tr>th,
-    .table-responsive>.table>tbody>tr>th,
-    .table-responsive>.table>tfoot>tr>th,
-    .table-responsive>.table>thead>tr>td,
-    .table-responsive>.table>tbody>tr>td,
-    .table-responsive>.table>tfoot>tr>td {
-        white-space: nowrap;
+    
+    input {
+        width: 48% !important;
+        margin-top: 5px !important;
+    }
+    
+    input::placeholder{
+        font-size: 11px;
     }
 }
 
-@media screen and (max-width:392px){
-    i{
-        font-size: 60px !important;
+@media screen and (max-width: 539px){
+    th {
+        font-size: 11px;
     }
-    h1{
-        font-size: 15px !important;
+    
+    td {
+        font-size: 9px;
+    }
+    
+    input {
+        width: 90% !important;
+        margin: 0px auto;
+        margin-top: 5px !important;
+    }
+    
+    input::placeholder{
+        font-size: 9px;
     }
 }

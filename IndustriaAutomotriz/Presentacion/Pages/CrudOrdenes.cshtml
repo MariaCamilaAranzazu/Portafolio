@@ -11,28 +11,31 @@
                         Id
                     </th>
                     <th>
-                        RevId
+                        #Rev
                     </th>
                     <th>
-                        EmpCedula
+                        #Tec.
                     </th>
                     <th>
-                        ActSoftware
+                        Act.Soft
                     </th>
                     <th>
-                        InstRepuestos
+                        Inst.Rep
                     </th>
                     <th>
-                        CostoRespuestos
+                        $ Rep
                     </th>
                     <th>
-                        CostoServicio
+                        $ Servicio
                     </th>
                     <th>
-                        TotalPagar
+                        $ Pagar
                     </th>
                     <th>
                         Observaciones
+                    </th>
+                    <th>
+                        Acciones
                     </th>
                 </tr>
             </thead>
@@ -70,9 +73,18 @@
                 <form method="post">
                     <input type="text" asp-for="NuevaOrden.RevId" placeholder="Id Revision" required />
                     <input type="text" asp-for="NuevaOrden.EmpCedula" placeholder="C.C. Empleado" required />
-                    <input type="text" asp-for="NuevaOrden.ActSoftware" placeholder="Actualización Software" required />
-                    <input type="text" asp-for="NuevaOrden.InstRepuestos" placeholder="Instalación Repuestos"
-                        required />
+                    <!--<input type="text" asp-for="NuevaOrden.ActSoftware" placeholder="Actualización Software" required />-->
+                    <select name="NuevaOrden.ActSoftware" required>
+                        <option value="" selected>Actualización Software</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                    <!--<input type="text" asp-for="NuevaOrden.InstRepuestos" placeholder="Instalación Repuestos" required />-->
+                    <select name="NuevaOrden.InstRepuestos" required>
+                        <option value="" selected>Instalación Repuestos</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
                     <input type="text" asp-for="NuevaOrden.CostoRespuestos" placeholder="Costo Repuestos" required />
                     <input type="text" asp-for="NuevaOrden.CostoServicio" placeholder="Costo Servicio" required />
                     <input type="text" asp-for="NuevaOrden.TotalPagar" placeholder="Total a Pagar" required />
@@ -89,10 +101,18 @@
                 <form method="post">
                     <input type="text" asp-for="OrdenEditar.RevId" placeholder="Buscar Id revision" required />
                     <input type="text" asp-for="OrdenEditar.EmpCedula" placeholder="C.C. Empleado" required />
-                    <input type="text" asp-for="OrdenEditar.ActSoftware" placeholder="Actualización Software"
-                        required />
-                    <input type="text" asp-for="OrdenEditar.InstRepuestos" placeholder="Instalación Repuestos"
-                        required />
+                    <!--<input type="text" asp-for="OrdenEditar.ActSoftware" placeholder="Actualización Software" required />-->
+                    <select name="OrdenEditar.ActSoftware" required>
+                        <option value="" selected>Actualización Software</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
+                    <!--<input type="text" asp-for="OrdenEditar.InstRepuestos" placeholder="Instalación Repuestos" required />-->
+                    <select name="OrdenEditar.InstRepuestos" required>
+                        <option value="" selected>Instalación Repuestos</option>
+                        <option value="SI">SI</option>
+                        <option value="NO">NO</option>
+                    </select>
                     <input type="text" asp-for="OrdenEditar.CostoRespuestos" placeholder="Costo Repuestos" required />
                     <input type="text" asp-for="OrdenEditar.CostoServicio" placeholder="Costo Servicio" required />
                     <input type="text" asp-for="OrdenEditar.TotalPagar" placeholder="Total a Pagar" required />

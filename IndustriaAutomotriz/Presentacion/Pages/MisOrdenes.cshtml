@@ -1,0 +1,60 @@
+@page
+@model Presentacion.Pages.MisOrdenes
+
+<div class="big-container">
+    <h1>Mis Órdenes</h1>
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Rev Id
+                    </th>
+                    <th>
+                        #Tec
+                    </th>
+                    <th>
+                        Act.Soft
+                    </th>
+                    <th>
+                        Inst.Rep
+                    </th>
+                    <th>
+                        $Rep
+                    </th>
+                    <th>
+                        $Servicio
+                    </th>
+                    <th>
+                        $Pagar
+                    </th>
+                    <th>
+                        Observaciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model.OrdenesEncontradas != null)
+                    {
+                        foreach (var orden in Model.OrdenesEncontradas)
+                        {
+                            <tr>
+                                <td>@orden.RevId</td>
+                                <td>@orden.EmpCedula</td>
+                                <td>@orden.ActSoftware</td>
+                                <td>@orden.InstRepuestos</td>
+                                <td>@orden.CostoRespuestos</td>
+                                <td>@orden.CostoServicio</td>
+                                <td>@orden.TotalPagar</td>
+                                <td>@orden.Observaciones</td>
+                            </tr>
+                        }
+                    }
+
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -31,6 +31,9 @@
                     <th>
                         Correo
                     </th>
+                    <th>
+                        Acciones
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -63,13 +66,19 @@
             </div>
             <div class="shadow">
                 <form method="post">
-                    <input type="text" asp-for="NuevoEmpleado.Nombre" placeholder="Nombres" required />
-                    <input type="text" asp-for="NuevoEmpleado.Apellido" placeholder="Apellidos" required />
-                    <input type="text" asp-for="NuevoEmpleado.Cedula" placeholder="Cedula" required />
-                    <input type="text" asp-for="NuevoEmpleado.CargoId" placeholder="Id Cargo" required />
-                    <input type="text" asp-for="NuevoEmpleado.Telefono" placeholder="Telefono" required />
-                    <input type="text" asp-for="NuevoEmpleado.Direccion" placeholder="Direccion" required />
-                    <input type="email" asp-for="NuevoEmpleado.Correo" placeholder="Correo" required />
+                    <input type="text" asp-for="NuevoEmpleado.Nombre" placeholder="Nombres" required/>
+                    <input type="text" asp-for="NuevoEmpleado.Apellido" placeholder="Apellidos" required/>
+                    <input type="text" asp-for="NuevoEmpleado.Cedula" placeholder="Cedula" required/>
+                    <!--<input type="text" asp-for="NuevoEmpleado.CargoId" placeholder="Id Cargo" required/>-->
+                    <select name="NuevoEmpleado.CargoId" required>
+                        <option value="" selected>Id Cargo</option>
+                        <option value="1">1 - Tecnico</option>
+                        <option value="2">2 - Gestor</option>
+                        <option value="3">3 - Administrador</option>
+                    </select>
+                    <input type="text" asp-for="NuevoEmpleado.Telefono" placeholder="Telefono" required/>
+                    <input type="text" asp-for="NuevoEmpleado.Direccion" placeholder="Direccion" required/>
+                    <input type="email" asp-for="NuevoEmpleado.Correo" placeholder="Correo" required/>
                     <button type="submit" class="no-light-buttons">Guardar</button>
                 </form>
             </div>
@@ -83,7 +92,13 @@
                     <input type="text" asp-for="EmpleadoEditar.Cedula" placeholder="Buscar Cédula" required />
                     <input type="text" asp-for="EmpleadoEditar.Nombre" placeholder="Nombres" required />
                     <input type="text" asp-for="EmpleadoEditar.Apellido" placeholder="Apellidos" required />
-                    <input type="text" asp-for="EmpleadoEditar.CargoId" placeholder="Id Cargo" required />
+                    <!--<input type="text" asp-for="EmpleadoEditar.CargoId" placeholder="Id Cargo" required />-->
+                    <select name="EmpleadoEditar.CargoId"  required>
+                        <option value="" selected>Id Cargo</option>
+                        <option value="1">1 - Tecnico</option>
+                        <option value="2">2 - Gestor</option>
+                        <option value="3">3 - Administrador</option>
+                    </select>
                     <input type="text" asp-for="EmpleadoEditar.Telefono" placeholder="Telefono" required />
                     <input type="text" asp-for="EmpleadoEditar.Direccion" placeholder="Direccion" required />
                     <input type="email" asp-for="EmpleadoEditar.Correo" placeholder="Correo" required />
